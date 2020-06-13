@@ -4,52 +4,52 @@
     "data": [
         {
             "id": "11",
-            "tagName": "Picnic",
+            "tagName": "Congratulations",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "12",
-            "tagName": "School",
+            "tagName": "Diwali",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "13",
-            "tagName": "Parents",
+            "tagName": "Easter",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "14",
-            "tagName": "Friend",
+            "tagName": "Father's Day",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "15",
-            "tagName": "Sibling",
+            "tagName": "Friendship",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "16",
-            "tagName": "Spouse",
+            "tagName": "Get Well",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "17",
-            "tagName": "Colleague",
+            "tagName": "Graduation",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "18",
-            "tagName": "Anniversary",
+            "tagName": "Just Because",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "19",
-            "tagName": "Birthday",
+            "tagName": "Mother's Day",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "20",
-            "tagName": "Christmas",
+            "tagName": "Valentine's Day",
             "url": "/assets/json/templates/1.json"
         }
     ]

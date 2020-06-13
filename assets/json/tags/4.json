@@ -4,37 +4,37 @@
     "data": [
         {
             "id": "31",
-            "tagName": "Picnic",
+            "tagName": "Congratulations",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "32",
-            "tagName": "School",
+            "tagName": "Diwali",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "33",
-            "tagName": "Parents",
+            "tagName": "Easter",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "34",
-            "tagName": "Friend",
+            "tagName": "Father's Day",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "35",
-            "tagName": "Sibling",
+            "tagName": "Friendship",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "36",
-            "tagName": "Spouse",
+            "tagName": "Get Well",
             "url": "/assets/json/templates/1.json"
         },
         {
             "id": "37",
-            "tagName": "Colleague",
+            "tagName": "Graduation",
             "url": "/assets/json/templates/1.json"
         }
     ]
