@@ -1,0 +1,56 @@
+{
+    "page": 2,
+    "last_page": false,
+    "data": [
+        {
+            "id": "11",
+            "tagName": "Picnic",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "12",
+            "tagName": "School",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "13",
+            "tagName": "Parents",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "14",
+            "tagName": "Friend",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "15",
+            "tagName": "Sibling",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "16",
+            "tagName": "Spouse",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "17",
+            "tagName": "Colleague",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "18",
+            "tagName": "Anniversary",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "19",
+            "tagName": "Birthday",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "20",
+            "tagName": "Christmas",
+            "url": "/assets/json/templates/1.json"
+        }
+    ]
+}

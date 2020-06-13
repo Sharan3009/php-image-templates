@@ -1,0 +1,41 @@
+{
+    "page": 4,
+    "last_page": true,
+    "data": [
+        {
+            "id": "31",
+            "tagName": "Picnic",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "32",
+            "tagName": "School",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "33",
+            "tagName": "Parents",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "34",
+            "tagName": "Friend",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "35",
+            "tagName": "Sibling",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "36",
+            "tagName": "Spouse",
+            "url": "/assets/json/templates/1.json"
+        },
+        {
+            "id": "37",
+            "tagName": "Colleague",
+            "url": "/assets/json/templates/1.json"
+        }
+    ]
+}
