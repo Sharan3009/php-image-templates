@@ -1,17 +1,24 @@
 $(document).ready(function(){
-    $.ajax({
-        type:"GET",
-        url: "api/tags.php?page=1",
-        dataType: 'json',
-        success:function(data){
-            $.ajax({
-                type:"GET",
-                url:"api/templates.php?file=1",
-                dataType:'json',
-                success:function(){
-                    
-                }
-            })
-        }
-    })
+    getTags();
+    getTemplates();
 })
+
+function getTags(){
+    ajax.get("api/tags.php",{page:1})
+    .then((data)=>{
+        console.log(data);
+    })
+    .catch((error)=>{
+        console.error(error);
+    });
+}
+
+function getTemplates(){
+    ajax.get("api/templates.php",{file:1})
+    .then((data)=>{
+        console.log(data);
+    })
+    .catch((error)=>{
+        console.error(error);
+    });
+}
