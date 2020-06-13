@@ -5,52 +5,52 @@
         {
             "id": "11",
             "tagName": "Congratulations",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "12",
             "tagName": "Diwali",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "13",
             "tagName": "Easter",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "14",
             "tagName": "Father's Day",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "15",
             "tagName": "Friendship",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "16",
             "tagName": "Get Well",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "17",
             "tagName": "Graduation",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "18",
             "tagName": "Just Because",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "19",
             "tagName": "Mother's Day",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "20",
             "tagName": "Valentine's Day",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         }
     ]
 }

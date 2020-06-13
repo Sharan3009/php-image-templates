@@ -5,37 +5,37 @@
         {
             "id": "31",
             "tagName": "Congratulations",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "32",
             "tagName": "Diwali",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "33",
             "tagName": "Easter",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "34",
             "tagName": "Father's Day",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "35",
             "tagName": "Friendship",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "36",
             "tagName": "Get Well",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         },
         {
             "id": "37",
             "tagName": "Graduation",
-            "url": "/assets/json/templates/1.json"
+            "file": "1.json"
         }
     ]
 }
