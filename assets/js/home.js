@@ -2,6 +2,7 @@ $(document).ready(function(){
     getTags();
     onTagChangeHandler();
     onLoadMoreHandler();
+    onTemplateSelect();
 });
 let tagPage = 1;
 let templatePage = 1;
@@ -112,4 +113,27 @@ function onLoadMoreHandler(){
     $(".load-more-button").on("click",function(){
         eval(`${this.name}()`);
     })
+}
+
+function onTemplateSelect(){
+    $("#templatesList").on("click",'[name="tagTemplates"]',function(){
+        toggleMainViews();
+        setTemplateProperties(this);
+    })
+}
+
+function setTemplateProperties(templateCard) {
+    let imageUrl = $(templateCard).find("img").attr("src");
+    $("#selectedTemplate").css(
+        {
+            "background-image":`url(${imageUrl})`,
+            "background-repeat": "no-repeat",
+            "background-size": "cover"
+        }
+        );
+}
+
+function toggleMainViews(){
+    $("#selection").toggleClass("d-none");
+    $("#generatePdf").toggleClass("d-none");
 }

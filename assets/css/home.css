@@ -7,3 +7,9 @@
     cursor: pointer;
     z-index: 2;
 }
+
+.selected-template {
+    position: relative; 
+    width: 100%; 
+    padding-top: 56.25%;
+}

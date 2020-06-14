@@ -10,15 +10,19 @@
 <body>
     <?php include "shared/header.php" ?>
 
-    <div class="container-fluid parent-flex">
+    <div class="container-fluid parent-flex" id="selection">
         <div class="row">
-            <div class="col-3 parent-flex border-right px-0">
+            <div class="col-md-3 d-md-flex d-none parent-flex border-right px-0">
                 <?php include "shared/tags-view.php" ?>
             </div>
-            <div class="col-9 parent-flex px-0">
+            <div class="col-md-9 parent-flex px-0">
                 <?php include "shared/templates-view.php" ?>
             </div>
         </div>
+    </div>
+
+    <div id="generatePdf" class="parent-flex d-none">
+        <?php include "shared/template-generate.php" ?>
     </div>
 
     <?php include "shared/minimal-js.php" ?>
