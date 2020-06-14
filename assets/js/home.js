@@ -36,8 +36,18 @@ function getTags(){
 
 function getTemplates(){
     ajax.get("api/templates.php",{page:1,count:25,tagName:"Poaceae"})
-    .then((data)=>{
-        console.log(data);
+    .then((response)=>{
+        let templatesListEle = $("#templatesList")
+        if(response && Array.isArray(response.data)){
+            let templatesArr = response.data.map((tag)=>{
+                let template = $(templatesListEle.find("template").html());
+                let html = `<i class="fa fa-tag"></i> ${tag.tagName}`;
+                template.find('[name="tag"]').html(html)
+                return template;
+
+            });
+            templatesListEle.append(templatesArr);
+        }
     })
     .catch((error)=>{
         console.error(error);
