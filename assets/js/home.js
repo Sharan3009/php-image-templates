@@ -12,7 +12,7 @@ function getTemplatesOnPageLoad(){
 }
 function getTagsApi(){
     return new Promise((resolve,reject)=>{
-        ajax.get("api/tags.php",{page:tagPage,count:25})
+        ajax.get("api/tags.php",{page:tagPage,count:20})
         .then((response)=>{
             resolve(response);
         })
@@ -58,7 +58,7 @@ function drawTagsUI(response){
 
 function getTemplatesApi(tagName){
     return new Promise((resolve,reject)=>{
-        ajax.get("api/templates.php",{page:1,count:25,tagName:tagName})
+        ajax.get("api/templates.php",{page:1,count:10,tagName:tagName})
         .then((response)=>{
             resolve(response);
         })
