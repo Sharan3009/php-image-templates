@@ -1,9 +1,11 @@
 $(document).ready(function(){
     getTags();
     onTagChangeHandler();
+    onLoadMoreHandler();
 });
 let tagPage = 1;
 let templatePage = 1;
+let tagName;
 let radioEleStr = 'input[type="radio"][name="tagRadios"]';
 
 function getTemplatesOnPageLoad(){
@@ -56,9 +58,9 @@ function drawTagsUI(response){
     }
 }
 
-function getTemplatesApi(tagName){
+function getTemplatesApi(){
     return new Promise((resolve,reject)=>{
-        ajax.get("api/templates.php",{page:1,count:10,tagName:tagName})
+        ajax.get("api/templates.php",{page:templatePage,count:10,tagName:tagName})
         .then((response)=>{
             resolve(response);
         })
@@ -70,14 +72,14 @@ function getTemplatesApi(tagName){
     })
 }
 
-function getTemplates(tagName){
+function getTemplates(){
     $("#templatesList").find('[name="tagTemplates"]').not("template").remove();
     getTemplatesApi(tagName).then((response)=>{
         drawTemplatesUI(response);
     })
 }
 
-function getMoreTemplates(tagName){
+function getMoreTemplates(){
     getTemplatesApi(tagName).then((response)=>{
         drawTemplatesUI(response);
     })
@@ -94,11 +96,19 @@ function drawTemplatesUI(response){
 
         });
         templatesListEle.append(templatesArr);
+        templatePage++;
     }
 }
 
 function onTagChangeHandler(){
     $("#tagsList").on("change",radioEleStr,function(){
-        getTemplates(this.value);
+        tagName = this.value;
+        getTemplates();
+    })
+}
+
+function onLoadMoreHandler(){
+    $(".load-more-button").on("click",function(){
+        eval(`${this.name}()`);
     })
 }
