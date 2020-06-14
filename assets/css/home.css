@@ -1,0 +1,9 @@
+#templatesList .card{
+    box-shadow: rgb(74, 74, 74) 0px 0px 5px;
+}
+#templatesList .card:hover{
+    transition: all 100ms ease-in;
+    transform: scale(1.05);
+    cursor: pointer;
+    z-index: 2;
+}
