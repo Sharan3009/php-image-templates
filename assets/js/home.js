@@ -6,10 +6,11 @@ $(document).ready(function(){
 function getTags(){
     ajax.get("api/tags.php",{page:1,count:25})
     .then((response)=>{
+        let tagsListEle = $("#tagsList")
         if(response && Array.isArray(response.data)){
             let notChecked = true;
             let tagsArr = response.data.map((tag)=>{
-                let tagTemplate = $($("#tagTemplate").html());
+                let tagTemplate = $(tagsListEle.find("template").html());
                 let tagId = `tag${tag.id}`;
                 let tagRadio = tagTemplate.find('[type="radio"]');
                 if(notChecked){
@@ -24,7 +25,7 @@ function getTags(){
                 return tagTemplate;
 
             });
-            $("#tagsList").append(tagsArr);
+            tagsListEle.append(tagsArr);
         }
     })
     .catch((error)=>{
