@@ -11,10 +11,11 @@
 
     <div class="container-fluid parent-flex">
         <div class="row">
-            <div class="col-3 parent-flex border-right pr-0">
+            <div class="col-3 parent-flex border-right px-0">
                 <?php include "shared/tags-view.php" ?>
             </div>
-            <div class="col-9">
+            <div class="col-9 parent-flex px-0">
+                <?php include "shared/templates-view.php" ?>
             </div>
         </div>
     </div>
