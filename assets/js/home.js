@@ -7,10 +7,10 @@ $(document).ready(function(){
 let tagPage = 1;
 let templatePage = 1;
 let tagName;
-let radioEleStr = 'input[type="radio"][name="tagRadios"]';
+let radioEleStr = 'input[type="radio"]';
 
 function getTemplatesOnPageLoad(){
-    $("#tagsList").find(radioEleStr).first().trigger("click");
+    $(".tagsList").first().find(radioEleStr).first().trigger("click");
 
 }
 function getTagsApi(){
@@ -28,7 +28,6 @@ function getTagsApi(){
 }
 
 function getTags(){
-    $("#tagsList").find(radioEleStr).not("template").remove();
     getTagsApi().then((response)=>{
         drawTagsUI(response);
         getTemplatesOnPageLoad();
@@ -40,23 +39,28 @@ function getMoreTags(){
 }
 
 function drawTagsUI(response){
-    let tagsListEle = $("#tagsList");
-    if(response && Array.isArray(response.data)){
-        let tagsArr = response.data.map((tag)=>{
-            let tagTemplate = $(tagsListEle.find("template").html());
-            let tagId = `tag${tag.id}`;
-            let tagRadio = tagTemplate.find('[type="radio"]');
-            tagRadio.attr("id",tagId)
-            tagRadio.attr("value",tag.tagName);
-            let tagLabel = tagTemplate.find("label");
-            tagLabel.attr("for",tagId);
-            tagLabel.text(tag.tagName);
-            return tagTemplate;
-
-        });
-        tagsListEle.append(tagsArr);
-        tagPage++;
-    }
+    let tagsListEles = $(".tagsList");
+    tagsListEles.each((index,ele)=>{
+        let tagsListEle = $(ele);
+        if(response && Array.isArray(response.data)){
+            let tagsArr = response.data.map((tag)=>{
+                let tagTemplate = $(tagsListEle.find("template").html());
+                let tagId = `${tag.id}`;
+                let tagRadio = tagTemplate.find('[type="radio"]');
+                tagRadio.attr("attr-id",tagId);
+                let tempId = tagRadio.attr("id");
+                tagRadio.attr("id",`${tempId}${tagId}`)
+                tagRadio.attr("value",tag.tagName);
+                let tagLabel = tagTemplate.find("label");
+                tagLabel.attr("for",`${tempId}${tagId}`);
+                tagLabel.text(tag.tagName);
+                return tagTemplate;
+    
+            });
+            tagsListEle.append(tagsArr);
+        }
+    });
+    tagPage++;
 }
 
 function getTemplatesApi(){
@@ -102,15 +106,27 @@ function drawTemplatesUI(response){
 }
 
 function onTagChangeHandler(){
-    $("#tagsList").on("change",radioEleStr,function(){
+    $(".tagsList").on("change",radioEleStr,function(){
+        updateAllOtherRadioTags($(this));
         tagName = this.value;
         templatePage = 1;
         getTemplates();
     })
 }
 
+function updateAllOtherRadioTags(ele){
+    let id = ele.attr("attr-id");
+    $(".tagsList").each((index,tagsList)=>{
+        let currentRadio = $(tagsList).find(`[attr-id="${id}"`);
+        if(!currentRadio.checked){
+            currentRadio.prop("checked",true);
+        }
+    })
+}
+
 function onLoadMoreHandler(){
-    $(".load-more-button").on("click",function(){
+    $(".load-more-button").on("click",function(e){
+        e.stopPropagation();
         eval(`${this.name}()`);
     })
 }

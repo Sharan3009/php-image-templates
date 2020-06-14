@@ -6,6 +6,7 @@
             Dropdown button
         </button>
         <div class="dropdown-menu dropdown-menu-right" style="height:60vh;overflow-y:auto;" aria-labelledby="dropdownMenuButton">
+        <?php $uniqueRadioIdentifier="tagDropdown"?>
             <?php include "shared/tags-list.php" ?>
         </div>
     </div>
