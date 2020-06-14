@@ -103,6 +103,7 @@ function drawTemplatesUI(response){
 function onTagChangeHandler(){
     $("#tagsList").on("change",radioEleStr,function(){
         tagName = this.value;
+        templatePage = 1;
         getTemplates();
     })
 }
