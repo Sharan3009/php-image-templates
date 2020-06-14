@@ -7,6 +7,18 @@
     <?php include "shared/minimal-css.php" ?>
 </head>
 <body>
+    <?php include "shared/header.php" ?>
+
+    <div class="container-fluid parent-flex">
+        <div class="row">
+            <div class="col-3 parent-flex border-right pr-0">
+                <?php include "shared/tags-view.php" ?>
+            </div>
+            <div class="col-9">
+            </div>
+        </div>
+    </div>
+
     <?php include "shared/minimal-js.php" ?>
     <script src="assets/js/home.js" type="text/javascript"></script>
 </body>
