@@ -35,7 +35,7 @@ function getTags(){
 }
 
 function getTemplates(){
-    ajax.get("api/templates.php",{page:1})
+    ajax.get("api/templates.php",{page:1,count:25,tagName:"Poaceae"})
     .then((data)=>{
         console.log(data);
     })
