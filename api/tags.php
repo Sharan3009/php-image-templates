@@ -15,7 +15,7 @@
             $data = [];
             $startingPage = ($page - 1)*$count;
             if($startingPage>=0){
-                $data = array_slice(json_decode($file,true),$startingPage,$count);
+                $data = array_slice(json_decode($file),$startingPage,$count);
             }
             $json->data = $data;
             echo json_encode($json);
