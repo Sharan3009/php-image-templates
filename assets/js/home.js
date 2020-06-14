@@ -4,7 +4,7 @@ $(document).ready(function(){
 })
 
 function getTags(){
-    ajax.get("api/tags.php",{page:1})
+    ajax.get("api/tags.php",{page:1,count:25})
     .then((response)=>{
         if(response){
             let tagsArr = response.data.map((tag)=>{

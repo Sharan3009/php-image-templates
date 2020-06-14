@@ -1,5 +1,5 @@
-<h5 class="py-2 border-bottom">Tags</h5>
-<div class="flex-grow-overflow mb-2" id="tagsList">
+<h5 class="py-2 border-bottom mb-0">Tags</h5>
+<div class="flex-grow-overflow" id="tagsList">
 
 </div>
 <template id="tagTemplate">
