@@ -6,6 +6,7 @@ $(document).ready(function(){
     onFontSelect();
     onTextColorSelect();
     onPreviewTemplateHandler();
+    onGenerateTempatesHandler();
     $('#colorPicker').val("#000000");
 });
 let tagPage = 1;
@@ -205,7 +206,7 @@ function onPreviewTemplateHandler(){
         if(error){
             generateError(error);
         } else {
-            generateTemplates(arrOfNames);
+            generatePreviews(arrOfNames);
         }
     })
 }
@@ -216,7 +217,7 @@ function generateError(error){
     errorEle.text(error);
 }
 
-function generateTemplates(names = []){
+function generatePreviews(names = []){
     $("#namesError").addClass("d-none");
     $(`#generatedTemplates >.template-preview`).remove();
     let namesForDemo = names.slice(0,6);
@@ -228,6 +229,19 @@ function generateTemplates(names = []){
     $("#generatedTemplates").append(templates);
     $("#templatesPreview").removeClass("d-none");
     $("#templatesPreview")[0].scrollIntoView({behavior:"smooth"});
+}
+
+function onGenerateTempatesHandler(){
+    $(".generate-templates").on("click",function(){
+        let pdfHtml = $("#generatedTemplates").html();
+        ajax.post("api/generate-pdf.php",{
+            action:"generate-pdf",
+            html:pdfHtml
+        })
+        .then((response)=>{
+            console.log(response)
+        })
+    })
 }
 
 function toggleMainViews(){

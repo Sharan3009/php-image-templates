@@ -17,7 +17,7 @@
             <template>
                 <div class="col-lg-4 col-md-6 col-12 p-0" name="tagTemplates">
                     <div class="card m-2 template-shadow">
-                        <img class="card-img-top border" src="assets/images/green-leaves-top.png" alt="Card image">
+                        <img class="card-img-top border" src="http://via.placeholder.com/500x300.png" alt="Card image">
                         <div class="card-body">
                             <span class="badge badge-secondary" name="tag"></span>
                         </div>
