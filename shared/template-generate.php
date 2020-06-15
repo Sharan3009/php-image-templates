@@ -33,7 +33,7 @@
                             <input type="color" id="colorPicker" name="colorPicker" value="#000000">
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary">Generate</button>
+                    <button type="button" class="btn btn-primary generate-template">Generate</button>
                 </div>
             </div>
         </div>
