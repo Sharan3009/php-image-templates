@@ -5,6 +5,7 @@ $(document).ready(function(){
     onTemplateSelect();
     onFontSelect();
     onTextColorSelect();
+    onPreviewTemplateHandler();
     $('#colorPicker').val("#000000");
 });
 let tagPage = 1;
@@ -165,13 +166,68 @@ function onTextColorSelect(){
 
 function setTemplateProperties(templateCard) {
     let imageUrl = $(templateCard).find("img").attr("src");
-    $("#selectedTemplate").css(
+    $($("#templatePreviewHtmlTemplate").prop("content"))
+    .find(".selected-template")
+    .add(".selected-template")
+    .css(
         {
             "background-image":`url(${imageUrl})`,
             "background-repeat": "no-repeat",
             "background-size": "cover"
         }
-        );
+    );
+}
+
+function onPreviewTemplateHandler(){
+    $(".preview-template").on("click",function(){
+        $("#templatesPreview").removeClass("d-none");
+        $("#templatesPreview")[0].scrollIntoView({behavior:"smooth"});
+        let text = $("#templateNames").val();
+        let error = null;
+        let arrOfNames = [];
+        if(text){
+            if(text.trim()){
+                arrOfNames = text.split("\n");
+                if(arrOfNames.length<=20){
+                    arrOfNames.some((name)=>{
+                        if(name && name.length>100){
+                            error = `The name "${name}" has more than 100 characters. Please make sure they do not exceed the limit.`;
+                            return error;
+                        }
+                    });
+                } else {
+                    error = "You cannot generate more than 20 page templates at a time";
+                }
+            } else {
+                error = "Make sure the input box has atleast one character to proceed";
+            }
+        } else {
+            error = "Textbox cannot be empty";
+        }
+        if(error){
+            generateError(error);
+        } else {
+            generateTemplates(arrOfNames);
+        }
+    })
+}
+
+function generateError(error){
+    let errorEle = $("#namesError");
+    errorEle.removeClass("d-none");
+    errorEle.text(error);
+}
+
+function generateTemplates(names = []){
+    $("#namesError").addClass("d-none");
+    $(`#generatedTemplates >.template-preview`).remove();
+    let namesForDemo = names.slice(0,6);
+    let templates = namesForDemo.map((name)=>{
+        let template = $($(`#templatePreviewHtmlTemplate`).html());
+        template.find(".template-text").text(name);
+        return template;
+    });
+    $("#generatedTemplates").append(templates);
 }
 
 function toggleMainViews(){
