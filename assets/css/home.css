@@ -1,4 +1,4 @@
-#templatesList .card{
+.template-shadow{
     box-shadow: rgb(74, 74, 74) 0px 0px 5px;
 }
 #templatesList .card:hover{
@@ -10,6 +10,13 @@
 
 .selected-template {
     position: relative; 
-    width: 100%; 
-    padding-top: 56.25%;
+    padding-bottom: 54.25%;
+}
+
+.template-text{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    font-size:7vw;
 }

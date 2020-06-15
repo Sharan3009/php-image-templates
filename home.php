@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <?php include "shared/minimal-css.php" ?>
+    <!-- <link href="assets/css/fontselect-alternate.css" rel="stylesheet" type="text/css" media="all" /> -->
     <link href="assets/css/home.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
@@ -26,6 +27,7 @@
     </div>
 
     <?php include "shared/minimal-js.php" ?>
+    <script src="assets/js/fontpicker.js" type="text/javascript"></script>
     <script src="assets/js/home.js" type="text/javascript"></script>
 </body>
 </html>

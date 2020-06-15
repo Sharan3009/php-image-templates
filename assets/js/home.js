@@ -3,6 +3,9 @@ $(document).ready(function(){
     onTagChangeHandler();
     onLoadMoreHandler();
     onTemplateSelect();
+    onFontSelect();
+    onTextColorSelect();
+    $('#colorPicker').val("#000000");
 });
 let tagPage = 1;
 let templatePage = 1;
@@ -138,6 +141,28 @@ function onTemplateSelect(){
     })
 }
 
+function setTextCss(obj){
+    for(let key in obj){
+        $(".apply-font").css({[key]:obj[key]});
+    }
+}
+
+function onFontSelect(){
+    new FontPicker(
+        "AIzaSyA_wjcKCakGT7URaUYhR-_CgmipNty-6Bw",
+        "Abel",
+        { limit: 100 }
+    )
+}
+
+function onTextColorSelect(){
+    $(function(){
+        $('#colorPicker').change(function(){  
+            setTextCss({"color":$(this).val()});
+        });
+      });
+}
+
 function setTemplateProperties(templateCard) {
     let imageUrl = $(templateCard).find("img").attr("src");
     $("#selectedTemplate").css(
@@ -150,6 +175,8 @@ function setTemplateProperties(templateCard) {
 }
 
 function toggleMainViews(){
+    $("#selection .flex-grow-overflow").scrollTop(0);
+    $("#generatePdf .flex-grow-overflow").scrollTop(0);
     $("#selection").toggleClass("d-none");
     $("#generatePdf").toggleClass("d-none");
 }
