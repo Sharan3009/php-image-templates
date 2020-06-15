@@ -180,8 +180,6 @@ function setTemplateProperties(templateCard) {
 
 function onPreviewTemplateHandler(){
     $(".preview-template").on("click",function(){
-        $("#templatesPreview").removeClass("d-none");
-        $("#templatesPreview")[0].scrollIntoView({behavior:"smooth"});
         let text = $("#templateNames").val();
         let error = null;
         let arrOfNames = [];
@@ -228,6 +226,8 @@ function generateTemplates(names = []){
         return template;
     });
     $("#generatedTemplates").append(templates);
+    $("#templatesPreview").removeClass("d-none");
+    $("#templatesPreview")[0].scrollIntoView({behavior:"smooth"});
 }
 
 function toggleMainViews(){

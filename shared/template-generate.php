@@ -39,6 +39,36 @@
     </section>
     <section class="py-3 d-none" id="templatesPreview">
         <h2 class="text-center">Step 3: Preview of Templates</h2>
+        <div class="text-center my-2">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#emailGenerateModal">
+                Download PDF
+            </button>
+            <div class="modal fade" id="emailGenerateModal" tabindex="-1" role="dialog" aria-labelledby="emailGenerateModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Ready to Print?</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body text-left">
+                            <div class="form-group">Enter your email address to get access to your printable PDF.</div>
+                            <div class="form-group row">
+                                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                                <div class="col-sm-10">
+                                    <input type="text" placeholder="you@example.com" class="form-control" id="staticEmail">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success generate-templates">Get my cards!</button>
+                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="col-lg-9 col-12 mx-auto p-0">
             <div id="generatedTemplates" 
             class="d-flex flex-wrap justify-content-around
