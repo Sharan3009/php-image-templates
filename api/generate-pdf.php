@@ -62,7 +62,7 @@
         $dompdf->render();
         // $dompdf->stream("sample.pdf",array("Attachment"=>0));
         $pdf = $dompdf->output();
-        file_put_contents($savein.str_replace("/","-","Dummy.pdf"), $pdf);    // save the pdf file on server
+        file_put_contents($savein.str_replace("/","-",uniqid("file").".pdf"), $pdf);    // save the pdf file on server
     };
 
 ?>
