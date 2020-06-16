@@ -290,6 +290,7 @@ function onGenerateTempatesHandler(){
 function onEmailInputHandler(){
     let emailSendButton = $(".generate-templates");
     $("#staticEmail").on("keyup",function(e){
+        pdfFormatJson.email = e.target.value;
         if(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(e.target.value)){
             emailSendButton.prop("disabled",false);
         } else {
