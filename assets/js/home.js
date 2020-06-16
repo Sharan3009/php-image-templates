@@ -106,6 +106,7 @@ function drawTemplatesUI(response){
     if(response && Array.isArray(response.data)){
         let templatesArr = response.data.map((tag)=>{
             let template = $(templatesListEle.find("template").html());
+            $(template).find(".card-template").css("background-image",`url("${tag.templateUrl}")`);
             let html = `<i class="fa fa-tag"></i> ${tag.tagName}`;
             template.find('[name="tag"]').html(html)
             return template;
