@@ -260,13 +260,29 @@ function generatePreviews(names = []){
 
 function onGenerateTempatesHandler(){
     $(".generate-templates").on("click",function(){
+        let emailSendButton = $(".generate-templates");
+        let emailSuccess = $("#emailSuccess");
+        let emailError = $("#emailError");
+        emailSuccess.addClass("d-none");
+        emailError.addClass("d-none");
+        emailSendButton.prop("disabled",true);
         ajax.post("api/generate-pdf.php",{
             action:"generate-pdf",
             pdfFormatJson:pdfFormatJson
         }).then((response)=>{
+            emailSendButton.prop("disabled",false);
             if(response){
-                alert(1)
+                emailSuccess.removeClass("d-none");
+                emailError.addClass("d-none");
+            } else {
+                emailError.removeClass("d-none");
+                emailSuccess.addClass("d-none");
             }
+        }).catch((error)=>{
+            emailSendButton.prop("disabled",false);
+            emailError.removeClass("d-none");
+            emailSuccess.addClass("d-none");
+            console.error(error);
         })
     })
 }

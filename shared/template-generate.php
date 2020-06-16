@@ -60,6 +60,17 @@
                                     <input type="text" placeholder="you@example.com" class="form-control" id="staticEmail">
                                 </div>
                             </div>
+                            <div class="form-group row">
+                                <div class="col-sm-2"></div>
+                                <div class="col-sm-10">
+                                    <div class="alert alert-success d-none" role="alert" id="emailSuccess">
+                                        Email sent successfully
+                                    </div>
+                                    <div class="alert alert-warning d-none" role="alert" id="emailError">
+                                        Error occured while sending the email. Please check the email or try again later.
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-success generate-templates" disabled>Get my cards!</button>
