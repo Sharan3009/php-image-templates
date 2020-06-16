@@ -263,6 +263,10 @@ function onGenerateTempatesHandler(){
         ajax.post("api/generate-pdf.php",{
             action:"generate-pdf",
             pdfFormatJson:pdfFormatJson
+        }).then((response)=>{
+            if(response){
+                alert(1)
+            }
         })
     })
 }

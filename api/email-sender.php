@@ -47,9 +47,9 @@
             $mail->MsgHTML($content);
             $mail->IsHTML(true);
             if(!$mail->Send()) 
-            echo "Problem sending email.";
+            echo json_encode(false);
             else 
-            echo "email sent.";
+            echo json_encode(true);
     };
 
 ?>

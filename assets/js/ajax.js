@@ -6,46 +6,28 @@ class Ajax {
     }
 
     get(url,data){
-        let ajaxParam = {
-            url,
-            type:"GET",
-            data,
-            dataType:"json"
-        }
-        return this._ajaxCall(ajaxParam);
+        return this._ajaxCall(url,"GET",data);
     }
 
     post(url,data){
-        let ajaxParam = {
-            url,
-            type:"POST",
-            data,
-        }
-        return this._ajaxCall(ajaxParam);
+        return this._ajaxCall(url,"POST",data);
     }
 
     put(url,data){
-        let ajaxParam = {
-            url,
-            type:"PUT",
-            data,
-        }
-        return this._ajaxCall(ajaxParam);
+        return this._ajaxCall(url,"PUT",data);
     }
 
     delete(url){
-        let ajaxParam = {
-            url,
-            type:"DELETE",
-            data,
-        }
-        return this._ajaxCall(ajaxParam);
+        return this._ajaxCall(url,"DELETE");
     }
 
-    _ajaxCall(obj){
+    _ajaxCall(url,type,data){
         return new Promise((resolve,reject)=>{
-            let ajaxObj = {
-                ...obj,
+            $.ajax({
+                url,
+                type,
+                data,
+                dataType:"json",
                 timeout:this._timeout || 30000,
                 success: function(data){
                     resolve(data);
@@ -53,8 +35,7 @@ class Ajax {
                 error: function(error){
                     reject(error);
                 }
-            }
-            $.ajax(ajaxObj);
+            })
         })
     }
 }
