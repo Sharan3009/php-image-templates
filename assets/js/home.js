@@ -153,6 +153,14 @@ function setTextCss(obj){
     for(let key in obj){
         pdfFormatJson[key] = obj[key];
         $(".apply-font").css({[key]:obj[key]});
+        $($("#templatePreviewHtmlTemplate").prop("content"))
+        .find(".apply-font")
+        .add(".apply-font")
+        .css(
+            {
+                [key]:obj[key]
+            }
+        );
     }
 }
 
@@ -181,6 +189,7 @@ function onTextColorSelect(){
 function setTemplateProperties(templateCard) {
     let imageUrl = $(templateCard).find(".card-template").css('background-image');
     imageUrl = imageUrl.replace('url(','').replace(')','').replace(/\"/gi, "");
+    pdfFormatJson["templateUrl"]= imageUrl;
     $($("#templatePreviewHtmlTemplate").prop("content"))
     .find(".selected-template")
     .add(".selected-template")
@@ -248,11 +257,9 @@ function generatePreviews(names = []){
 
 function onGenerateTempatesHandler(){
     $(".generate-templates").on("click",function(){
-        let pdfHtml = $("#generatedTemplates").html();
-        console.log(pdfFormatJson);
         ajax.post("api/generate-pdf.php",{
             action:"generate-pdf",
-            html:pdfHtml
+            pdfFormatJson:pdfFormatJson
         })
     })
 }
