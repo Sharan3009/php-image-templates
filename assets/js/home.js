@@ -1,18 +1,24 @@
+let tagPage = 1;
+let templatePage = 1;
+let tagName;
+let radioEleStr = 'input[type="radio"]';
+let pdfFormatJson = {
+    color: "#000000",
+    font: "Abel",
+    names: []
+};
+
 $(document).ready(function(){
     getTags();
     onTagChangeHandler();
     onLoadMoreHandler();
     onTemplateSelect();
-    onFontSelect();
+    fontPickerInstance();
     onTextColorSelect();
     onPreviewTemplateHandler();
     onGenerateTempatesHandler();
-    $('#colorPicker').val("#000000");
+    $('#colorPicker').val(pdfFormatJson.color);
 });
-let tagPage = 1;
-let templatePage = 1;
-let tagName;
-let radioEleStr = 'input[type="radio"]';
 
 function getTemplatesOnPageLoad(){
     $(".tagsList").first().find(radioEleStr).first().trigger("click");
@@ -145,21 +151,28 @@ function onTemplateSelect(){
 
 function setTextCss(obj){
     for(let key in obj){
+        pdfFormatJson[key] = obj[key];
         $(".apply-font").css({[key]:obj[key]});
     }
 }
 
-function onFontSelect(){
+function fontPickerInstance(){
     new FontPicker(
         "AIzaSyA_wjcKCakGT7URaUYhR-_CgmipNty-6Bw",
-        "Abel",
-        { limit: 100 }
+        pdfFormatJson.font,
+        { limit: 100 },
+        onFontSelect
     )
+}
+
+function onFontSelect(fontObj){
+    pdfFormatJson["font"] = fontObj.family;
+
 }
 
 function onTextColorSelect(){
     $(function(){
-        $('#colorPicker').change(function(){  
+        $('#colorPicker').change(function(){
             setTextCss({"color":$(this).val()});
         });
       });
@@ -219,6 +232,7 @@ function generateError(error){
 }
 
 function generatePreviews(names = []){
+    pdfFormatJson["names"] = names;
     $("#namesError").addClass("d-none");
     $(`#generatedTemplates >.template-preview`).remove();
     let namesForDemo = names.slice(0,6);
@@ -235,12 +249,10 @@ function generatePreviews(names = []){
 function onGenerateTempatesHandler(){
     $(".generate-templates").on("click",function(){
         let pdfHtml = $("#generatedTemplates").html();
+        console.log(pdfFormatJson);
         ajax.post("api/generate-pdf.php",{
             action:"generate-pdf",
             html:pdfHtml
-        })
-        .then((response)=>{
-            console.log(response)
         })
     })
 }
