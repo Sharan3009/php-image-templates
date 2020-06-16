@@ -5,7 +5,8 @@ let radioEleStr = 'input[type="radio"]';
 let pdfFormatJson = {
     color: "#000000",
     font: "Abel",
-    names: []
+    names: [],
+    email:$("#staticEmail").val()
 };
 
 $(document).ready(function(){

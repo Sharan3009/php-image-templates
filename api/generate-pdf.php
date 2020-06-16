@@ -1,6 +1,7 @@
 <?php
 
     require_once "../dompdf/autoload.inc.php";
+    require_once "./email-sender.php";
 
     use Dompdf\Dompdf;
     use Dompdf\Options;
@@ -21,6 +22,7 @@
         $templateUrl = $pdfFormatJson["templateUrl"];
         $color = $pdfFormatJson["color"];
         $names = $pdfFormatJson["names"];
+        $email = $pdfFormatJson["email"];
         $namesLength = count($names);
 
         $html_start = "
@@ -54,6 +56,7 @@
         };
         $html = $html_start . $html_content . $html_end;
         $savein = "../assets/pdf/";
+        $fileName = uniqid("file").".pdf";
         $options = new Options();
         $options->set('isRemoteEnabled', true);
         $dompdf = new Dompdf($options);
@@ -62,7 +65,9 @@
         $dompdf->render();
         // $dompdf->stream("sample.pdf",array("Attachment"=>0));
         $pdf = $dompdf->output();
-        file_put_contents($savein.str_replace("/","-",uniqid("file").".pdf"), $pdf);    // save the pdf file on server
+        file_put_contents($savein.str_replace("/","-",$fileName), $pdf);    // save the pdf file on server
+        $sendEmailObj = array("email"=>$email,"fileUrl"=>realpath($savein . $fileName));
+        sendEmail($sendEmailObj);
     };
 
 ?>
