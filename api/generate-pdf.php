@@ -66,7 +66,8 @@
         // $dompdf->stream("sample.pdf",array("Attachment"=>0));
         $pdf = $dompdf->output();
         file_put_contents($savein.str_replace("/","-",$fileName), $pdf);    // save the pdf file on server
-        $sendEmailObj = array("email"=>$email,"fileUrl"=>realpath($savein . $fileName));
+        $fileUrl = realpath($savein . $fileName);
+        $sendEmailObj = array("email"=>$email,"fileUrl"=>$fileUrl);
         sendEmail($sendEmailObj);
     };
 

@@ -5,7 +5,7 @@
     require_once '../phpmailer/src/PHPMailer.php';
     require_once '../phpmailer/src/SMTP.php';
     require_once '../phpmailer/src/Exception.php';
-    
+
     if ($_SERVER['REQUEST_METHOD']==='POST') {
         if(isset($_POST['action'])){
             switch($_POST['action']){
@@ -25,9 +25,7 @@
                     <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
                 </head>
                 <body>
-                    <div>
-                        <p>Click <a href ='{$fileUrl}'>here</a> to download.</p>
-                    </div>
+                    $fileUrl
                 </body>
             </html>";
 
