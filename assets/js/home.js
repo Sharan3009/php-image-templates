@@ -166,7 +166,8 @@ function onTextColorSelect(){
 }
 
 function setTemplateProperties(templateCard) {
-    let imageUrl = $(templateCard).find("img").attr("src");
+    let imageUrl = $(templateCard).find(".card-template").css('background-image');
+    imageUrl = imageUrl.replace('url(','').replace(')','').replace(/\"/gi, "");
     $($("#templatePreviewHtmlTemplate").prop("content"))
     .find(".selected-template")
     .add(".selected-template")

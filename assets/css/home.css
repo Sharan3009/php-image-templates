@@ -8,7 +8,7 @@
     z-index: 2;
 }
 
-.selected-template {
+.card-template, .selected-template {
     position: relative; 
     padding-bottom: 54.25%;
 }

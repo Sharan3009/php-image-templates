@@ -73,7 +73,7 @@
             <div id="generatedTemplates" 
             class="d-flex flex-wrap justify-content-around
              justify-content-center align-items-center
-              h-100 border"
+              h-100 border template-shadow"
             style="min-height:50vh;">
                 <template id="templatePreviewHtmlTemplate">
                     <div style="width:33%;" class="border template-preview p-2 my-1">
