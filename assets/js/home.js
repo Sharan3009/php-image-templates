@@ -17,6 +17,7 @@ $(document).ready(function(){
     onTextColorSelect();
     onPreviewTemplateHandler();
     onGenerateTempatesHandler();
+    onEmailInputHandler();
     $('#colorPicker').val(pdfFormatJson.color);
 });
 
@@ -262,6 +263,17 @@ function onGenerateTempatesHandler(){
             action:"generate-pdf",
             pdfFormatJson:pdfFormatJson
         })
+    })
+}
+
+function onEmailInputHandler(){
+    let emailSendButton = $(".generate-templates");
+    $("#staticEmail").on("keyup",function(e){
+        if(/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(e.target.value)){
+            emailSendButton.prop("disabled",false);
+        } else {
+            emailSendButton.prop("disabled",true);
+        }
     })
 }
 

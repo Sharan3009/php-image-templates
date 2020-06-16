@@ -62,7 +62,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success generate-templates">Get my cards!</button>
+                            <button type="button" class="btn btn-success generate-templates" disabled>Get my cards!</button>
                             <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
                         </div>
                     </div>
