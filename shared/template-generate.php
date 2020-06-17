@@ -3,7 +3,6 @@
         <h2>Step 1: Choose a template</h2>
         <div class="col-lg-9 col-12 mx-auto">
             <div class="template-shadow p-2">
-                <?php $fontSize="font-size:7vw"?>
                 <?php include "shared/template-preview.php" ?>
            </div>
         </div>
@@ -87,8 +86,7 @@
               h-100 border template-shadow"
             style="min-height:50vh;">
                 <template id="templatePreviewHtmlTemplate">
-                    <div style="width:33%;" class="border template-preview p-2 my-1">
-                        <?php $fontSize="font-size:2.5rem"?>
+                    <div class="template-preview p-2 my-1 w-100">
                         <?php include "shared/template-preview.php" ?>
                     </div>
                 </template>

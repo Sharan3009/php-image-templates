@@ -247,13 +247,10 @@ function generatePreviews(names = []){
     pdfFormatJson["names"] = names;
     $("#namesError").addClass("d-none");
     $(`#generatedTemplates >.template-preview`).remove();
-    let namesForDemo = names.slice(0,6);
-    let templates = namesForDemo.map((name)=>{
-        let template = $($(`#templatePreviewHtmlTemplate`).html());
-        template.find(".template-text").text(name);
-        return template;
-    });
-    $("#generatedTemplates").append(templates);
+    let nameForDemo = names[0];
+    let template = $($(`#templatePreviewHtmlTemplate`).html());
+    template.find(".template-text").text(nameForDemo);
+    $("#generatedTemplates").append(template);
     $("#templatesPreview").removeClass("d-none");
     $("#templatesPreview")[0].scrollIntoView({behavior:"smooth"});
 }
