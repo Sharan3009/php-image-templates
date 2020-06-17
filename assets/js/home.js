@@ -19,6 +19,7 @@ $(document).ready(function(){
     onPreviewTemplateHandler();
     onGenerateTempatesHandler();
     onEmailInputHandler();
+    onModalCloseHandler();
 });
 
 function getTemplatesOnPageLoad(){
@@ -259,14 +260,17 @@ function onGenerateTempatesHandler(){
         let emailSendButton = $(".generate-templates");
         let emailSuccess = $("#emailSuccess");
         let emailError = $("#emailError");
+        let emailTextInput = $("#staticEmail");
         emailSuccess.addClass("d-none");
         emailError.addClass("d-none");
         emailSendButton.prop("disabled",true);
+        emailTextInput.prop("disabled",true);
         ajax.post("api/generate-pdf.php",{
             action:"generate-pdf",
             pdfFormatJson:pdfFormatJson
         }).then((response)=>{
             emailSendButton.prop("disabled",false);
+            emailTextInput.prop("disabled",false);
             if(response){
                 emailSuccess.removeClass("d-none");
                 emailError.addClass("d-none");
@@ -276,6 +280,7 @@ function onGenerateTempatesHandler(){
             }
         }).catch((error)=>{
             emailSendButton.prop("disabled",false);
+            emailTextInput.prop("disabled",false);
             emailError.removeClass("d-none");
             emailSuccess.addClass("d-none");
             console.error(error);
@@ -292,6 +297,18 @@ function onEmailInputHandler(){
         } else {
             emailSendButton.prop("disabled",true);
         }
+    })
+}
+
+function onModalCloseHandler(){
+    $('#pdfGenerateModal').on('hidden.bs.modal', function (e) {
+        // do something...
+        let emailSuccess = $("#emailSuccess");
+        let emailError = $("#emailError");
+        let emailTextInput = $("#staticEmail");
+        emailTextInput.val("");
+        emailError.addClass("d-none");
+        emailSuccess.addClass("d-none");
     })
 }
 

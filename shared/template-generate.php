@@ -39,10 +39,10 @@
     <section class="py-3 d-none" id="templatesPreview">
         <h2 class="text-center">Step 3: Preview of Templates</h2>
         <div class="text-center my-2">
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#emailGenerateModal">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#pdfGenerateModal">
                 Download PDF
             </button>
-            <div class="modal fade" id="emailGenerateModal" tabindex="-1" role="dialog" aria-labelledby="emailGenerateModalLabel" aria-hidden="true">
+            <div class="modal fade" id="pdfGenerateModal" tabindex="-1" role="dialog" aria-labelledby="pdfGenerateModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
