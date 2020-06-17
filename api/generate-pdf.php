@@ -48,9 +48,13 @@
                 $pageBreakCss="";
             }
             $html_content .= "
-                <div style='width:100%;position:relative;$pageBreakCss'>
-                    <img style='width:100%;' src='$templateUrl' />
-                    <div style='font-family:{$font};font-size:100px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);color:{$color};'>{$value}</div>
+                <div style='position:absolute;left:0px;right:0px;bottom:0px;top:0px;$pageBreakCss'>
+                    <div style='position:relative;width:100%;height:100%;'>
+                        <div style='position:absolute;top:50%;transform:translateY(-50%);'>
+                            <img style='width:100%;' src='$templateUrl'/>
+                        </div>
+                        <div style='line-height:0.5;padding:0px 8px;font-family:{$font};font-size:90vw;position:absolute;left:0px;right:0px;text-align:center;top:50%;transform:translateY(-50%);color:{$color};'>{$value}</div>
+                    </div>
                 </div>
             ";
         };
