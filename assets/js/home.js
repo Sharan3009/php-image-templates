@@ -19,7 +19,6 @@ $(document).ready(function(){
     onPreviewTemplateHandler();
     onGenerateTempatesHandler();
     onEmailInputHandler();
-    $('#colorPicker').val(pdfFormatJson.color);
 });
 
 function getTemplatesOnPageLoad(){
