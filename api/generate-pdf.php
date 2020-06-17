@@ -53,7 +53,7 @@
                         <div style='position:absolute;top:50%;transform:translateY(-50%);'>
                             <img style='width:100%;' src='$templateUrl'/>
                         </div>
-                        <div style='line-height:0.5;padding:0px 8px;font-family:{$font};font-size:90vw;position:absolute;left:0px;right:0px;text-align:center;top:50%;transform:translateY(-50%);color:{$color};'>{$value}</div>
+                        <div style='line-height:0.7;padding:0px 8px;font-family:{$font};font-size:75px;position:absolute;left:0px;right:0px;text-align:center;top:50%;transform:translateY(-50%);color:{$color};'>{$value}</div>
                     </div>
                 </div>
             ";
