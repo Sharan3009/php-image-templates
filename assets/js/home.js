@@ -27,11 +27,11 @@ function getTagsApi(){
     return new Promise((resolve,reject)=>{
         ajax.get("api/tags.php",{page:tagPage,count:20})
         .then((response)=>{
-            showHideLoadMore(loadMoreBtnName,response);
+            showHideLoadMoreOnPageLoad(loadMoreBtnName,response);
             resolve(response);
         })
         .catch((error)=>{
-            showHideLoadMore(loadMoreBtnName,null);
+            showHideLoadMoreOnPageLoad(loadMoreBtnName,null);
             console.error(error);
             reject(error);
         });
@@ -67,8 +67,15 @@ function getTags(){
     });
 }
 
-function getMoreTags(){
-    getTagsApi().then((response)=>{drawTagsUI(response)})
+function getMoreTags(cb=f=>f){
+    getTagsApi()
+    .then((response)=>{
+        drawTagsUI(response);
+        cb(response);
+    })
+    .catch((errpr)=>{
+        cb(null);
+    })
 }
 
 function drawTagsUI(response){
@@ -101,11 +108,11 @@ function getTemplatesApi(){
     return new Promise((resolve,reject)=>{
         ajax.get("api/templates.php",{page:templatePage,count:10,tagName:tagName})
         .then((response)=>{
-            showHideLoadMore(loadMoreBtnName,response);
+            showHideLoadMoreOnPageLoad(loadMoreBtnName,response);
             resolve(response);
         })
         .catch((error)=>{
-            showHideLoadMore(loadMoreBtnName,null);
+            showHideLoadMoreOnPageLoad(loadMoreBtnName,null);
             console.error(error);
             reject(error);
         });
@@ -136,9 +143,14 @@ function getTemplates(){
     })
 }
 
-function getMoreTemplates(){
-    getTemplatesApi(tagName).then((response)=>{
+function getMoreTemplates(cb=f=>f){
+    getTemplatesApi(tagName)
+    .then((response)=>{
         drawTemplatesUI(response);
+        cb(response);
+    })
+    .catch((error)=>{
+        cb(null);
     })
 }
 
@@ -179,8 +191,19 @@ function updateAllOtherRadioTags(ele){
 
 function onLoadMoreHandler(){
     $(".load-more-button").on("click",function(e){
+        $(this).addClass("d-none");
+        $(this).next().removeClass("d-none");
         e.stopPropagation();
-        eval(`${this.name}()`);
+        eval(`${this.name}(${(response)=>{
+            if(response){
+                if(response.data && response.data.length){
+                    $(this).removeClass("d-none");
+                }
+            } else {
+                alert("Something went wrong while loading more items");
+            }
+            $(this).next().addClass("d-none");
+        }})`);
     })
 }
 
@@ -371,7 +394,7 @@ function maintainDataAndError(selector,fn,error,data){
     }
 }
 
-function showHideLoadMore(loadMoreBtnName,response){
+function showHideLoadMoreOnPageLoad(loadMoreBtnName,response){
     let btn = $(`.load-more-button[name=${loadMoreBtnName}]`);
     if(response){
         if(response.data && response.data.length===0){
@@ -380,7 +403,7 @@ function showHideLoadMore(loadMoreBtnName,response){
             btn.removeClass('d-none');
         }
     } else {
-        btn.addClass("d-none");
+        btn.removeClass("d-none");
     }
 }
 
