@@ -25,14 +25,15 @@ $(document).ready(function(){
 
 function getTagsApi(){
     let loadMoreBtnName = "getMoreTags";
+    showHideLoadMoreBtn(loadMoreBtnName,{data:[]});
     return new Promise((resolve,reject)=>{
         ajax.get("api/tags.php",{page:tagPage,count:20})
         .then((response)=>{
-            showHideLoadMoreOnPageLoad(loadMoreBtnName,response);
+            showHideLoadMoreBtn(loadMoreBtnName,response);
             resolve(response);
         })
         .catch((error)=>{
-            showHideLoadMoreOnPageLoad(loadMoreBtnName,null);
+            showHideLoadMoreBtn(loadMoreBtnName,null);
             console.error(error);
             reject(error);
         });
@@ -106,14 +107,15 @@ function drawTagsUI(response){
 
 function getTemplatesApi(){
     let loadMoreBtnName = "getMoreTemplates";
+    showHideLoadMoreBtn(loadMoreBtnName,{data:[]});
     return new Promise((resolve,reject)=>{
         ajax.get("api/templates.php",{page:templatePage,count:10,tagName:tagName})
         .then((response)=>{
-            showHideLoadMoreOnPageLoad(loadMoreBtnName,response);
+            showHideLoadMoreBtn(loadMoreBtnName,response);
             resolve(response);
         })
         .catch((error)=>{
-            showHideLoadMoreOnPageLoad(loadMoreBtnName,null);
+            showHideLoadMoreBtn(loadMoreBtnName,null);
             console.error(error);
             reject(error);
         });
@@ -406,7 +408,7 @@ function maintainDataAndError(selector,fn,error,data){
     }
 }
 
-function showHideLoadMoreOnPageLoad(loadMoreBtnName,response){
+function showHideLoadMoreBtn(loadMoreBtnName,response){
     let btn = $(`.load-more-button[name=${loadMoreBtnName}]`);
     if(response){
         if(response.data && response.data.length===0){
