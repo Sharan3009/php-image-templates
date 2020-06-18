@@ -12,7 +12,7 @@
     </div>
 </div>
 <div class="parent-flex">
-    <div class="flex-grow-overflow">
+    <div class="flex-grow-overflow position-relative">
         <div  id="templatesList" class="d-flex flex-wrap">
         </div>
         <?php $buttonName="getMoreTemplates" ?>

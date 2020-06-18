@@ -24,12 +24,11 @@ $(document).ready(function(){
 
 function getTagsApi(){
     return new Promise((resolve,reject)=>{
-        ajax.get("api/tags.php",{page:tagPage,count:20})
+        ajax.get("api/tas.php",{page:tagPage,count:20})
         .then((response)=>{
             resolve(response);
         })
         .catch((error)=>{
-            alert("Some error occured");
             console.error(error);
             reject(error);
         });
@@ -37,16 +36,22 @@ function getTagsApi(){
 }
 
 function getTags(){
+    let selector = ".tagsList";
+    let fn = "drawTagsUI";
+    maintainLoader(selector,true);
     getTagsApi()
     .then((response)=>{
-        drawTagsUI(response);
-        tagName = $(".tagsList").children(":first-child").find('[type="radio"]').val();
-        $(".tagsList").each((index,ele)=>{
+        maintainLoader(selector,false);
+        maintainDataAndError(selector,fn,null,response);
+        tagName = $(selector).children(":first-child").find('[type="radio"]').val();
+        $(selector).each((index,ele)=>{
             $(ele).find(`[value=${tagName}]`).prop("checked",true);
         })
         getTemplates();
     })
     .catch((error)=>{
+        maintainLoader(selector,false);
+        maintainDataAndError(selector,fn,"Error occured while fetching the tags",null);
         getTemplates();
     });
 }
@@ -87,7 +92,6 @@ function getTemplatesApi(){
             resolve(response);
         })
         .catch((error)=>{
-            alert("Something went wrong");
             console.error(error);
             reject(error);
         });
@@ -95,9 +99,18 @@ function getTemplatesApi(){
 }
 
 function getTemplates(){
-    $("#templatesList").children().remove();
-    getTemplatesApi(tagName).then((response)=>{
+    let selector = "#templatesList";
+    let fn = "drawTemplatesUI";
+    maintainLoader(selector,true);
+    getTemplatesApi(tagName)
+    .then((response)=>{
+        maintainLoader(selector,false);
+        maintainDataAndError(selector,fn,null,response);
         drawTemplatesUI(response);
+    })
+    .catch((error)=>{
+        maintainLoader(selector,false);
+        maintainDataAndError(selector,fn,"Error occured while fetching the templates",null);
     })
 }
 
@@ -302,6 +315,38 @@ function onEmailInputHandler(){
             emailSendButton.prop("disabled",true);
         }
     })
+}
+
+function maintainLoader(selector,loader){
+    if(loader){
+        $(selector).each((index,ele)=>{
+            $(ele).children().remove();
+            $(ele).html(`
+            <div class="position-absolute" style="left:50%;top:50%;transform:translate(-50%,-50%);">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>`);
+        })
+    } else {
+        $(selector).each((index,ele)=>{
+            $(ele).children().remove();
+        })
+    }
+}
+
+function maintainDataAndError(selector,fn,error,data){
+    if(error){
+        $(selector).each((index,ele)=>{
+            $(ele).children().remove();
+            $(ele).html(`
+            <div class="position-absolute text-center w-100" style="left:0px;top:50%;transform:translateY(-50%);">
+                ${error}
+            </div>`);
+        });
+    } else {
+        eval(`${fn}(${JSON.stringify(data)})`);
+    }
 }
 
 function onModalCloseHandler(){
