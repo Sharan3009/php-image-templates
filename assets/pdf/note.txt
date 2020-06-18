@@ -1,0 +1,1 @@
+This folder needs to be commited in order to save pdf files to this location.
