@@ -16,6 +16,7 @@ $(document).ready(function(){
     onTemplateSelect();
     fontPickerInstance();
     onTextColorSelect();
+    onToggleToDesignsHandler();
     onPreviewTemplateHandler();
     onGenerateTempatesHandler();
     onEmailInputHandler();
@@ -209,8 +210,17 @@ function onLoadMoreHandler(){
 
 function onTemplateSelect(){
     $("#templatesList").on("click",'[name="tagTemplates"]',function(){
-        toggleMainViews();
+        $("#generatePdf .flex-grow-overflow").scrollTop(0);
+        $("#selection").addClass("d-none");
+        $("#generatePdf").removeClass("d-none");
         setTemplateProperties(this);
+    })
+}
+
+function onToggleToDesignsHandler(){
+    $("#toggleToDesigns").on("click",function(){
+        $("#selection").removeClass("d-none");
+        $("#generatePdf").addClass("d-none");
     })
 }
 
@@ -417,11 +427,4 @@ function onModalCloseHandler(){
         emailError.addClass("d-none");
         emailSuccess.addClass("d-none");
     })
-}
-
-function toggleMainViews(){
-    $("#selection .flex-grow-overflow").scrollTop(0);
-    $("#generatePdf .flex-grow-overflow").scrollTop(0);
-    $("#selection").toggleClass("d-none");
-    $("#generatePdf").toggleClass("d-none");
 }
