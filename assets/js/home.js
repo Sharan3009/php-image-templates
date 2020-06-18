@@ -23,12 +23,15 @@ $(document).ready(function(){
 });
 
 function getTagsApi(){
+    let loadMoreBtnName = "getMoreTags";
     return new Promise((resolve,reject)=>{
-        ajax.get("api/tas.php",{page:tagPage,count:20})
+        ajax.get("api/tags.php",{page:tagPage,count:20})
         .then((response)=>{
+            showHideLoadMore(loadMoreBtnName,response);
             resolve(response);
         })
         .catch((error)=>{
+            showHideLoadMore(loadMoreBtnName,null);
             console.error(error);
             reject(error);
         });
@@ -86,12 +89,15 @@ function drawTagsUI(response){
 }
 
 function getTemplatesApi(){
+    let loadMoreBtnName = "getMoreTemplates";
     return new Promise((resolve,reject)=>{
         ajax.get("api/templates.php",{page:templatePage,count:10,tagName:tagName})
         .then((response)=>{
+            showHideLoadMore(loadMoreBtnName,response);
             resolve(response);
         })
         .catch((error)=>{
+            showHideLoadMore(loadMoreBtnName,null);
             console.error(error);
             reject(error);
         });
@@ -346,6 +352,19 @@ function maintainDataAndError(selector,fn,error,data){
         });
     } else {
         eval(`${fn}(${JSON.stringify(data)})`);
+    }
+}
+
+function showHideLoadMore(loadMoreBtnName,response){
+    let btn = $(`.load-more-button[name=${loadMoreBtnName}]`);
+    if(response){
+        if(response.data && response.data.length===0){
+            btn.addClass("d-none");
+        } else {
+            btn.removeClass('d-none');
+        }
+    } else {
+        btn.addClass("d-none");
     }
 }
 
