@@ -15,8 +15,8 @@
 
 .template-text{
     position: absolute;
-    left:50%;
+    left:0px;
     top:50%;
     line-height: 1;
-    transform: translate(-50%,-50%);
+    transform: translateY(-50%);
 }
