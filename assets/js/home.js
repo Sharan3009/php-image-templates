@@ -22,10 +22,6 @@ $(document).ready(function(){
     onModalCloseHandler();
 });
 
-function getTemplatesOnPageLoad(){
-    $(".tagsList").first().find(radioEleStr).first().trigger("click");
-
-}
 function getTagsApi(){
     return new Promise((resolve,reject)=>{
         ajax.get("api/tags.php",{page:tagPage,count:20})
@@ -41,9 +37,17 @@ function getTagsApi(){
 }
 
 function getTags(){
-    getTagsApi().then((response)=>{
+    getTagsApi()
+    .then((response)=>{
         drawTagsUI(response);
-        getTemplatesOnPageLoad();
+        tagName = $(".tagsList").children(":first-child").find('[type="radio"]').val();
+        $(".tagsList").each((index,ele)=>{
+            $(ele).find(`[value=${tagName}]`).prop("checked",true);
+        })
+        getTemplates();
+    })
+    .catch((error)=>{
+        getTemplates();
     });
 }
 
