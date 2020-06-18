@@ -27,6 +27,7 @@
     </div>
 
     <?php include "shared/minimal-js.php" ?>
+    <?php include "shared/html-template-tags.php" ?>
     <script src="assets/js/fontpicker.js" type="text/javascript"></script>
     <script src="assets/js/home.js" type="text/javascript"></script>
 </body>

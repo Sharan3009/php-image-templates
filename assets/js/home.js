@@ -57,7 +57,7 @@ function drawTagsUI(response){
         let tagsListEle = $(ele);
         if(response && Array.isArray(response.data)){
             let tagsArr = response.data.map((tag)=>{
-                let tagTemplate = $(tagsListEle.find("template").html());
+                let tagTemplate = $($(`#${tagsListEle.attr("attr-template-id")}`).html());
                 let tagId = `${tag.id}`;
                 let tagRadio = tagTemplate.find('[type="radio"]');
                 tagRadio.attr("attr-id",tagId);
@@ -91,7 +91,7 @@ function getTemplatesApi(){
 }
 
 function getTemplates(){
-    $("#templatesList").find('[name="tagTemplates"]').not("template").remove();
+    $("#templatesList").children().remove();
     getTemplatesApi(tagName).then((response)=>{
         drawTemplatesUI(response);
     })
@@ -107,7 +107,7 @@ function drawTemplatesUI(response){
     let templatesListEle = $("#templatesList")
     if(response && Array.isArray(response.data)){
         let templatesArr = response.data.map((tag)=>{
-            let template = $(templatesListEle.find("template").html());
+            let template = $($("#templatePlankTemplate").html());
             $(template).find(".card-template").css("background-image",`url("${tag.templateUrl}")`);
             let html = `<i class="fa fa-tag"></i> ${tag.tagName}`;
             template.find('[name="tag"]').html(html)

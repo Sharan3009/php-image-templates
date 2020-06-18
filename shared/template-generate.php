@@ -85,11 +85,6 @@
              justify-content-center align-items-center
               h-100 border template-shadow"
             style="min-height:50vh;">
-                <template id="templatePreviewHtmlTemplate">
-                    <div class="template-preview p-2 my-1 w-100">
-                        <?php include "shared/template-preview.php" ?>
-                    </div>
-                </template>
             </div>
         </div>
     </section>
