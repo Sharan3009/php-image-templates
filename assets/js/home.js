@@ -45,11 +45,19 @@ function getTags(){
     getTagsApi()
     .then((response)=>{
         maintainLoader(selector,false);
-        maintainDataAndError(selector,fn,null,response);
-        tagName = $(selector).children(":first-child").find('[type="radio"]').val();
-        $(selector).each((index,ele)=>{
-            $(ele).find(`[value=${tagName}]`).prop("checked",true);
-        })
+        if(response){
+            if(response.data && response.data.length===0){
+                maintainDataAndError(selector,fn,"No tags found",null);
+            } else {
+                maintainDataAndError(selector,fn,null,response);
+                tagName = $(selector).children(":first-child").find('[type="radio"]').val();
+                $(selector).each((index,ele)=>{
+                    $(ele).find(`[value=${tagName}]`).prop("checked",true);
+                })
+            }
+        } else {
+            maintainDataAndError(selector,fn,"Error occured while fetching the tags",null);
+        }
         getTemplates();
     })
     .catch((error)=>{
@@ -110,9 +118,17 @@ function getTemplates(){
     maintainLoader(selector,true);
     getTemplatesApi(tagName)
     .then((response)=>{
-        maintainLoader(selector,false);
-        maintainDataAndError(selector,fn,null,response);
-        drawTemplatesUI(response);
+        if(response){
+            if(response.data && response.data.length===0){
+                maintainDataAndError(selector,fn,"No templates found",null);
+            } else {
+                maintainLoader(selector,false);
+                maintainDataAndError(selector,fn,null,response);
+                drawTemplatesUI(response);
+            }
+        } else {
+            maintainDataAndError(selector,fn,"Error occured while fetching the templates",null);
+        }
     })
     .catch((error)=>{
         maintainLoader(selector,false);
