@@ -30,9 +30,11 @@ class Ajax {
                 dataType:"json",
                 timeout:this._timeout || 30000,
                 success: function(data){
+                    this._timeout = null;
                     resolve(data);
                 },
                 error: function(error){
+                    this._timeout = null;
                     reject(error);
                 }
             })

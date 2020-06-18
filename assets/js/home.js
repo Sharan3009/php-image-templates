@@ -337,7 +337,9 @@ function onGenerateTempatesHandler(){
         emailError.addClass("d-none");
         emailSendButton.prop("disabled",true);
         emailTextInput.prop("disabled",true);
-        ajax.post("api/generate-pdf.php",{
+        ajax
+        .timeout(60000)
+        .post("api/generate-pdf.php",{
             action:"generate-pdf",
             pdfFormatJson:pdfFormatJson
         }).then((response)=>{
