@@ -287,7 +287,7 @@ function onPreviewTemplateHandler(){
                 arrOfNames = text.split("\n");
                 if(arrOfNames.length<=20){
                     arrOfNames.some((name)=>{
-                        if(name && name.length>100){
+                        if(name && name.length>30){
                             error = `The name "${name}" has more than 100 characters. Please make sure they do not exceed the limit.`;
                             return error;
                         }
