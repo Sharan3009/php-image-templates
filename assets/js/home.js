@@ -2,8 +2,8 @@ let tagPage = configInitialPageNumber;
 let templatePage = configInitialPageNumber;
 let themeType;
 let pdfFormatJson = {
-    color: "#000000",
-    font: "Abel",
+    color: "",
+    font: "",
     names: [],
     email:$("#staticEmail").val()
 };
@@ -13,7 +13,6 @@ $(document).ready(function(){
     onTagChangeHandler();
     onLoadMoreHandler();
     onTemplateSelect();
-    fontPickerInstance();
     onTextColorSelect();
     onToggleToDesignsHandler();
     onDownloadClickHandler();
@@ -163,6 +162,8 @@ function drawTemplatesUI(response){
             let template = $($("#templatePlankTemplate").html());
             let card = $(template).find(".card-template")
             card.attr("attr-imgBigResolution",tag.imgBigResolution);
+            card.attr("attr-font",tag.font);
+            card.attr("attr-color",tag.color);
             card.css("background-image",`url("${tag.imgSmallResolution}")`);
             let html = `<i class="fa fa-tag"></i> ${tag.themeType}`;
             template.find('[name="tag"]').html(html)
@@ -267,9 +268,16 @@ function onTextColorSelect(){
 }
 
 function setTemplateProperties(templateCard) {
-    let imageUrl = $(templateCard).find(".card-template").attr("attr-imgBigResolution");
+    let card = $(templateCard).find(".card-template")
+    let imageUrl = card.attr("attr-imgBigResolution");
+    let font = card.attr("attr-font");
+    let color = card.attr("attr-color");
     imageUrl = imageUrl.replace('url(','').replace(')','').replace(/\"/gi, "");
-    pdfFormatJson["imgBigResolution"]= imageUrl;
+    pdfFormatJson.imgBigResolution = imageUrl;
+    pdfFormatJson.font = font;
+    pdfFormatJson.color = color;
+    fontPickerInstance();
+    $("#colorPicker").val(color);
     $($("#templatePreviewHtmlTemplate").prop("content"))
     .find(".selected-template")
     .add(".selected-template")  // add() to clone the template element's .selected-template and do the actions
