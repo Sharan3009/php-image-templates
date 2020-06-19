@@ -28,6 +28,38 @@
         $html_start = "
         <html>
             <head>
+                <style>
+                    .parent-div{
+                        position:absolute;
+                        left:0px;
+                        right:0px;
+                        bottom:0px;
+                        top:0px;
+                    }
+                    .template-container{
+                        position:relative;
+                        width:100%;
+                        height:100%;
+                    }
+                    .img-container{
+                        position:absolute;
+                        top:50%;
+                        transform:translateY(-50%);
+                    }
+                    .template-text{
+                        line-height:0.7;
+                        padding:0px 8px;
+                        font-family:{$font};
+                        font-size:75px;
+                        position:absolute;
+                        left:0px;
+                        right:0px;
+                        text-align:center;
+                        top:50%;
+                        transform:translateY(-50%);
+                        color:{$color};
+                    }
+                </style>
                 <link href='https://fonts.googleapis.com/css?family={$font}%3Aregular&subset=latin&font-display=swap' rel='stylesheet' type='text/css' media='all' />            </head>
             <body>
         ";
@@ -48,12 +80,12 @@
                 $pageBreakCss="";
             }
             $html_content .= "
-                <div style='position:absolute;left:0px;right:0px;bottom:0px;top:0px;$pageBreakCss'>
-                    <div style='position:relative;width:100%;height:100%;'>
-                        <div style='position:absolute;top:50%;transform:translateY(-50%);'>
+                <div class='parent-div' style='$pageBreakCss'>
+                    <div class='template-container'>
+                        <div class='img-container'>
                             <img style='width:100%;' src='$templateUrl'/>
                         </div>
-                        <div style='line-height:0.7;padding:0px 8px;font-family:{$font};font-size:75px;position:absolute;left:0px;right:0px;text-align:center;top:50%;transform:translateY(-50%);color:{$color};'>{$value}</div>
+                        <div class='template-text'>{$value}</div>
                     </div>
                 </div>
             ";
