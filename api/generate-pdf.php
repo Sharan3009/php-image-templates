@@ -24,12 +24,12 @@
         $names = $pdfFormatJson["names"];
         $email = $pdfFormatJson["email"];
         $namesLength = count($names);
-        if(count($names)>$config_max_pdf_pages){
+        if(count($names)>$GLOBALS['configMaxPdfPages']){
             echo json_encode(false);
             return;
         } else {
             foreach($names as $name){
-                if(strlen(trim($name))>$config_max_length_per_name){
+                if(strlen(trim($name))>$GLOBALS['configMaxLengthPerName']){
                     echo json_encode(false);
                     return;
                 }

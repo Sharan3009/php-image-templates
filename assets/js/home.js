@@ -1,7 +1,6 @@
 let tagPage = configInitialPageNumber;
 let templatePage = configInitialPageNumber;
 let tagName;
-let radioEleStr = 'input[type="radio"]';
 let pdfFormatJson = {
     color: "#000000",
     font: "Abel",
@@ -174,7 +173,7 @@ function drawTemplatesUI(response){
 }
 
 function onTagChangeHandler(){
-    $(".tagsList").on("change",radioEleStr,function(){
+    $(".tagsList").on("change",'input[type="radio"]',function(){
         updateAllOtherRadioTags($(this));
         tagName = this.value;
         templatePage = 1;
@@ -222,7 +221,7 @@ function onTemplateSelect(){
 
 function onToggleToDesignsHandler(){
     $("#toggleToDesigns").on("click",function(){
-        $(this).text("Select a design")
+        $(this).text(configToggleToDesignBtnText)
         $("#selection").removeClass("d-none");
         $("#generatePdf").addClass("d-none");
     })
@@ -271,7 +270,7 @@ function setTemplateProperties(templateCard) {
     pdfFormatJson["templateUrl"]= imageUrl;
     $($("#templatePreviewHtmlTemplate").prop("content"))
     .find(".selected-template")
-    .add(".selected-template")
+    .add(".selected-template")  // add() to clone the template element's .selected-template and do the actions
     .css(
         {
             "background-image":`url(${imageUrl})`,
