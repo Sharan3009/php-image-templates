@@ -1,5 +1,5 @@
-let tagPage = 1;
-let templatePage = 1;
+let tagPage = configInitialPageNumber;
+let templatePage = configInitialPageNumber;
 let tagName;
 let radioEleStr = 'input[type="radio"]';
 let pdfFormatJson = {
@@ -27,7 +27,7 @@ function getTagsApi(){
     let loadMoreBtnName = "getMoreTags";
     showHideLoadMoreBtn(loadMoreBtnName,{data:[]});
     return new Promise((resolve,reject)=>{
-        ajax.get("api/tags.php",{page:tagPage,count:20})
+        ajax.get("api/tags.php",{page:tagPage,count:configCountPerPage*2})
         .then((response)=>{
             showHideLoadMoreBtn(loadMoreBtnName,response);
             resolve(response);
@@ -109,7 +109,7 @@ function getTemplatesApi(){
     let loadMoreBtnName = "getMoreTemplates";
     showHideLoadMoreBtn(loadMoreBtnName,{data:[]});
     return new Promise((resolve,reject)=>{
-        ajax.get("api/templates.php",{page:templatePage,count:10,tagName:tagName})
+        ajax.get("api/templates.php",{page:templatePage,count:configCountPerPage,tagName:tagName})
         .then((response)=>{
             showHideLoadMoreBtn(loadMoreBtnName,response);
             resolve(response);

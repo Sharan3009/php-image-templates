@@ -33,6 +33,8 @@
     <script>
         configMaxLengthPerName = <?php echo $config_max_length_per_name ?>;
         configMaxPdfPages = <?php echo $config_max_pdf_pages ?>;
+        configInitialPageNumber = <?php echo $config_initial_page_number ?>;
+        configCountPerPage = <?php echo $config_count_per_page ?>;
     </script>
     <script src="assets/js/home.js" type="text/javascript"></script>
 </body>
