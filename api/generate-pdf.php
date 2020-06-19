@@ -1,6 +1,6 @@
 <?php
 
-    require_once "../dompdf/autoload.inc.php";
+    require_once "../libraries/dompdf/autoload.inc.php";
     require_once "./email-sender.php";
 
     use Dompdf\Dompdf;

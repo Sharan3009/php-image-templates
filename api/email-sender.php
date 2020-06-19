@@ -2,9 +2,9 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
-    require_once '../phpmailer/src/PHPMailer.php';
-    require_once '../phpmailer/src/SMTP.php';
-    require_once '../phpmailer/src/Exception.php';
+    require_once '../libraries/phpmailer/src/PHPMailer.php';
+    require_once '../libraries/phpmailer/src/SMTP.php';
+    require_once '../libraries/phpmailer/src/Exception.php';
 
     if ($_SERVER['REQUEST_METHOD']==='POST') {
         if(isset($_POST['action'])){
