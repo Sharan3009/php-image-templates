@@ -1,5 +1,5 @@
 <?php
-
+    $cc;
     require_once "../libraries/dompdf/autoload.inc.php";
     require_once "./email-sender.php";
 
@@ -17,19 +17,20 @@
     };
 
     function generatePdf($obj) {
+        include "../config/config.php";
         $pdfFormatJson = $obj["pdfFormatJson"] ?? array();
         $font = $pdfFormatJson["font"];
-        $templateUrl = $pdfFormatJson["templateUrl"];
+        $templateUrl = $pdfFormatJson["imgBigResolution"];
         $color = $pdfFormatJson["color"];
         $names = $pdfFormatJson["names"];
         $email = $pdfFormatJson["email"];
         $namesLength = count($names);
-        if(count($names)>$GLOBALS['configMaxPdfPages']){
+        if(count($names)>$config_max_pdf_pages){
             echo json_encode(false);
             return;
         } else {
             foreach($names as $name){
-                if(strlen(trim($name))>$GLOBALS['configMaxLengthPerName']){
+                if(strlen(trim($name))>$config_max_length_per_name){
                     echo json_encode(false);
                     return;
                 }
