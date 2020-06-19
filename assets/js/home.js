@@ -246,6 +246,7 @@ function setTextCss(obj){
 }
 
 function fontPickerInstance(){
+    $("#font-picker").empty();
     new FontPicker(
         "AIzaSyA_wjcKCakGT7URaUYhR-_CgmipNty-6Bw",
         pdfFormatJson.font,
