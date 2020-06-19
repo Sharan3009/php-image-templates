@@ -17,7 +17,7 @@ $(document).ready(function(){
     fontPickerInstance();
     onTextColorSelect();
     onToggleToDesignsHandler();
-    onPreviewTemplateHandler();
+    onDownloadClickHandler();
     onGenerateTempatesHandler();
     onEmailInputHandler();
     onModalCloseHandler();
@@ -279,8 +279,8 @@ function setTemplateProperties(templateCard) {
     );
 }
 
-function onPreviewTemplateHandler(){
-    $(".preview-template").on("click",function(){
+function onDownloadClickHandler(){
+    $(".download-template").on("click",function(e){
         let text = $("#templateNames").val();
         let error = null;
         let arrOfNames = [];
@@ -304,9 +304,10 @@ function onPreviewTemplateHandler(){
             error = "Textbox cannot be empty";
         }
         if(error){
+            e.stopPropagation();
             generateError(error);
         } else {
-            generatePreviews(arrOfNames);
+            $("#namesError").addClass("d-none");
         }
     })
 }
@@ -315,18 +316,6 @@ function generateError(error){
     let errorEle = $("#namesError");
     errorEle.removeClass("d-none");
     errorEle.text(error);
-}
-
-function generatePreviews(names = []){
-    pdfFormatJson["names"] = names;
-    $("#namesError").addClass("d-none");
-    $(`#generatedTemplates >.template-preview`).remove();
-    let nameForDemo = names[0];
-    let template = $($(`#templatePreviewHtmlTemplate`).html());
-    template.find(".template-text").text(nameForDemo);
-    $("#generatedTemplates").append(template);
-    $("#templatesPreview").removeClass("d-none");
-    $("#templatesPreview")[0].scrollIntoView({behavior:"smooth"});
 }
 
 function onGenerateTempatesHandler(){
