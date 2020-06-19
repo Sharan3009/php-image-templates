@@ -315,6 +315,7 @@ function onDownloadClickHandler(){
 function generateError(error){
     let errorEle = $("#namesError");
     errorEle.removeClass("d-none");
+    errorEle[0].scrollIntoView({behavior:"smooth"});
     errorEle.text(error);
 }
 
