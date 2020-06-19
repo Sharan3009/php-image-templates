@@ -161,7 +161,9 @@ function drawTemplatesUI(response){
     if(response && Array.isArray(response.data)){
         let templatesArr = response.data.map((tag)=>{
             let template = $($("#templatePlankTemplate").html());
-            $(template).find(".card-template").css("background-image",`url("${tag.templateUrl}")`);
+            let card = $(template).find(".card-template")
+            card.attr("attr-imgBigResolution",tag.imgBigResolution);
+            card.css("background-image",`url("${tag.imgSmallResolution}")`);
             let html = `<i class="fa fa-tag"></i> ${tag.themeType}`;
             template.find('[name="tag"]').html(html)
             return template;
@@ -265,9 +267,9 @@ function onTextColorSelect(){
 }
 
 function setTemplateProperties(templateCard) {
-    let imageUrl = $(templateCard).find(".card-template").css('background-image');
+    let imageUrl = $(templateCard).find(".card-template").attr("attr-imgBigResolution");
     imageUrl = imageUrl.replace('url(','').replace(')','').replace(/\"/gi, "");
-    pdfFormatJson["templateUrl"]= imageUrl;
+    pdfFormatJson["imgBigResolution"]= imageUrl;
     $($("#templatePreviewHtmlTemplate").prop("content"))
     .find(".selected-template")
     .add(".selected-template")  // add() to clone the template element's .selected-template and do the actions
