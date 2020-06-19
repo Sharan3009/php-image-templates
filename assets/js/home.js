@@ -289,7 +289,7 @@ function onDownloadClickHandler(){
                 arrOfNames = text.split("\n");
                 if(arrOfNames.length<=20){
                     arrOfNames.some((name)=>{
-                        if(name && name.trim().length>30){
+                        if(name && name.trim().length>100){
                             error = `The name "${name}" has more than 100 characters. Please make sure they do not exceed the limit.`;
                             return error;
                         }
@@ -308,6 +308,7 @@ function onDownloadClickHandler(){
             generateError(error);
         } else {
             $("#namesError").addClass("d-none");
+            pdfFormatJson["names"] = arrOfNames;
         }
     })
 }
