@@ -14,7 +14,7 @@
             $json->count = $count;
             $data = json_decode($file);
             $filtered_data = array_filter($data,function($o) use ($obj){
-                if($o->tagName === $obj['tagName']){
+                if($o->themeType === $obj['themeType']){
                     return true;
                 }
                 return false;

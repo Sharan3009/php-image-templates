@@ -1,6 +1,6 @@
 let tagPage = configInitialPageNumber;
 let templatePage = configInitialPageNumber;
-let tagName;
+let themeType;
 let pdfFormatJson = {
     color: "#000000",
     font: "Abel",
@@ -51,9 +51,9 @@ function getTags(){
                 maintainDataAndError(selector,fn,"No tags found",null);
             } else {
                 maintainDataAndError(selector,fn,null,response);
-                tagName = $(selector).children(":first-child").find('[type="radio"]').val();
+                themeType = $(selector).children(":first-child").find('[type="radio"]').val();
                 $(selector).each((index,ele)=>{
-                    $(ele).find(`[value=${tagName}]`).prop("checked",true);
+                    $(ele).find(`[value=${themeType}]`).prop("checked",true);
                 })
             }
         } else {
@@ -91,10 +91,10 @@ function drawTagsUI(response){
                 tagRadio.attr("attr-id",tagId);
                 let tempId = tagRadio.attr("id");
                 tagRadio.attr("id",`${tempId}${tagId}`)
-                tagRadio.attr("value",tag.tagName);
+                tagRadio.attr("value",tag.themeType);
                 let tagLabel = tagTemplate.find("label");
                 tagLabel.attr("for",`${tempId}${tagId}`);
-                tagLabel.text(tag.tagName);
+                tagLabel.text(tag.themeType);
                 return tagTemplate;
     
             });
@@ -108,7 +108,7 @@ function getTemplatesApi(){
     let loadMoreBtnName = "getMoreTemplates";
     showHideLoadMoreBtn(loadMoreBtnName,{data:[]});
     return new Promise((resolve,reject)=>{
-        ajax.get("api/templates.php",{page:templatePage,count:configCountPerPage,tagName:tagName})
+        ajax.get("api/templates.php",{page:templatePage,count:configCountPerPage,themeType:themeType})
         .then((response)=>{
             showHideLoadMoreBtn(loadMoreBtnName,response);
             resolve(response);
@@ -125,7 +125,7 @@ function getTemplates(){
     let selector = "#templatesList";
     let fn = "drawTemplatesUI";
     maintainLoader(selector,true);
-    getTemplatesApi(tagName)
+    getTemplatesApi(themeType)
     .then((response)=>{
         if(response){
             if(response.data && response.data.length===0){
@@ -146,7 +146,7 @@ function getTemplates(){
 }
 
 function getMoreTemplates(cb=f=>f){
-    getTemplatesApi(tagName)
+    getTemplatesApi(themeType)
     .then((response)=>{
         drawTemplatesUI(response);
         cb(response);
@@ -162,7 +162,7 @@ function drawTemplatesUI(response){
         let templatesArr = response.data.map((tag)=>{
             let template = $($("#templatePlankTemplate").html());
             $(template).find(".card-template").css("background-image",`url("${tag.templateUrl}")`);
-            let html = `<i class="fa fa-tag"></i> ${tag.tagName}`;
+            let html = `<i class="fa fa-tag"></i> ${tag.themeType}`;
             template.find('[name="tag"]').html(html)
             return template;
 
@@ -175,7 +175,7 @@ function drawTemplatesUI(response){
 function onTagChangeHandler(){
     $(".tagsList").on("change",'input[type="radio"]',function(){
         updateAllOtherRadioTags($(this));
-        tagName = this.value;
+        themeType = this.value;
         templatePage = 1;
         getTemplates();
     })
@@ -409,7 +409,7 @@ function showHideLoadMoreBtn(loadMoreBtnName,response){
             btn.removeClass('d-none');
         }
     } else {
-        btn.removeClass("d-none");
+        btn.addClass("d-none");
     }
 }
 
