@@ -289,15 +289,15 @@ function onDownloadClickHandler(){
         if(text){
             if(text.trim()){
                 arrOfNames = text.split("\n");
-                if(arrOfNames.length<=20){
+                if(arrOfNames.length<=configMaxPdfPages){
                     arrOfNames.some((name)=>{
-                        if(name && name.trim().length>100){
-                            error = `The name "${name}" has more than 100 characters. Please make sure they do not exceed the limit.`;
+                        if(name && name.trim().length>configMaxLengthPerName){
+                            error = `The name "${name}" has more than ${configMaxLengthPerName} characters. Please make sure they do not exceed the limit.`;
                             return error;
                         }
                     });
                 } else {
-                    error = "You cannot generate more than 20 page templates at a time";
+                    error = `You cannot generate more than ${configMaxPdfPages} page templates at a time`;
                 }
             } else {
                 error = "Make sure the input box has atleast one character to proceed";

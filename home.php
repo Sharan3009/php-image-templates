@@ -26,9 +26,14 @@
         <?php include "shared/template-generate.php" ?>
     </div>
 
+    <?php include "config/config.php" ?>
     <?php include "shared/minimal-js.php" ?>
     <?php include "shared/html-template-tags.php" ?>
     <script src="assets/js/fontpicker.js" type="text/javascript"></script>
+    <script>
+        configMaxLengthPerName = <?php echo $config_max_length_per_name ?>;
+        configMaxPdfPages = <?php echo $config_max_pdf_pages ?>;
+    </script>
     <script src="assets/js/home.js" type="text/javascript"></script>
 </body>
 </html>
