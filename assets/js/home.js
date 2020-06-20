@@ -214,11 +214,14 @@ function onLoadMoreHandler(){
 
 function onTemplateSelect(){
     $("#templatesList").on("click",'[name="tagTemplates"]',function(){
+        // adding setTimeout so that font's preapply before the text renders and stops abrupt font toggle in text
+        setTimeout(()=>{
+            $("#toggleToDesigns").html(`<i class="fa fa-arrow-left mr-3"></i>Back`);
+            $("#generatePdf .flex-grow-overflow").scrollTop(0);
+            $("#selection").addClass("d-none");
+            $("#generatePdf").removeClass("d-none");
+        });
         setTemplateProperties(this);
-        $("#toggleToDesigns").html(`<i class="fa fa-arrow-left mr-3"></i>Back`);
-        $("#generatePdf .flex-grow-overflow").scrollTop(0);
-        $("#selection").addClass("d-none");
-        $("#generatePdf").removeClass("d-none");
     })
 }
 

@@ -9,6 +9,8 @@
     <link href="assets/css/home.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
+    <!-- this apply-font element will stay everytime in order to preload the selected font -->
+    <div class="position-fixed apply-font" style="top:-1000px">preload font</div>
     <?php include "config/config.php" ?>
     <?php include "shared/header.php" ?>
 
