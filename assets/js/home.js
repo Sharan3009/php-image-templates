@@ -220,7 +220,7 @@ function onTemplateSelect(){
             $("#generatePdf .flex-grow-overflow").scrollTop(0);
             $("#selection").addClass("d-none");
             $("#generatePdf").removeClass("d-none");
-        });
+        },100);
         setTemplateProperties(this);
     })
 }
