@@ -214,11 +214,11 @@ function onLoadMoreHandler(){
 
 function onTemplateSelect(){
     $("#templatesList").on("click",'[name="tagTemplates"]',function(){
+        setTemplateProperties(this);
         $("#toggleToDesigns").html(`<i class="fa fa-arrow-left mr-3"></i>Back`);
         $("#generatePdf .flex-grow-overflow").scrollTop(0);
         $("#selection").addClass("d-none");
         $("#generatePdf").removeClass("d-none");
-        setTemplateProperties(this);
     })
 }
 
