@@ -279,6 +279,7 @@ function setTemplateProperties(templateCard) {
     pdfFormatJson.color = color;
     fontPickerInstance();
     $("#colorPicker").val(color);
+    setTextCss({color:color});
     $($("#templatePreviewHtmlTemplate").prop("content"))
     .find(".selected-template")
     .add(".selected-template")  // add() to clone the template element's .selected-template and do the actions
