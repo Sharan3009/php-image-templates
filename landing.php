@@ -359,8 +359,6 @@
     type="text/javascript"></script>
   <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery_002.js"
     type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery_003.js"
-    type="text/javascript"></script>
   <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/typed.js"
     type="text/javascript"></script>
   <script type="text/javascript">
@@ -377,9 +375,7 @@
 
 
   </script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/main.js"
-    type="text/javascript"></script>
-
+  <?php include "shared/minimal-js.php" ?>
   <script async="" src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/js"
     type="text/javascript"></script>
   <script type="text/javascript">
