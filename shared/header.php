@@ -6,15 +6,13 @@
     </div>
     <div class="site-mobile-menu-body">
       <ul class="site-nav-wrap">
-        <!-- <li><a href="home.php" class="nav-link active"><?php echo $config_toggle_to_design_btn_text?></a></li>
+        <li><a href="home.php" class="nav-link"><?php echo $config_toggle_to_design_btn_text?></a></li>
         <li><a href="#how_to_design" class="nav-link"><?php echo "How To Design" ?></a></li>
         <li><a href="#faq" class="nav-link"><?php echo "FAQ" ?></a></li>
         <li><a href="#about_us" class="nav-link"><?php echo "About Us" ?></a></li>
-        <li><a href="#contact_us" class="nav-link"><?php echo "Contact Us" ?></a></li> -->
+        <li><a href="#contact_us" class="nav-link"><?php echo "Contact Us" ?></a></li>
       </ul>
     </div>
-  </div>
-  <div class="top-bar" id="home-section">
   </div>
   <div id="sticky-wrapper" class="sticky-wrapper">
     <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target border-bottom" role="banner">
@@ -27,7 +25,7 @@
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="home.php" class="nav-link active"><?php echo $config_toggle_to_design_btn_text?></a></li>
+                <li><a href="home.php" class="nav-link"><?php echo $config_toggle_to_design_btn_text?></a></li>
                 <li><a href="landing.php#how_to_design" class="nav-link"><?php echo "How To Design" ?></a></li>
                 <li><a href="landing.php#faq" class="nav-link"><?php echo "FAQ" ?></a></li>
                 <li><a href="landing.php#about-section" class="nav-link"><?php echo "About Us" ?></a></li>
