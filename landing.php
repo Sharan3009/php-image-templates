@@ -45,422 +45,144 @@
         </div>
       </div>
     </div>
-    <section class="site-section">
+    <section class="site-section" id="how_to_design">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 class="text-black h1 site-section-heading text-center">Your Place Card Is Just Three Steps Away</h2>
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-4">
             <div class="p-3 box-with-humber">
               <div class="number-behind">01.</div>
-              <h2 class="text-primary">Innovate</h2>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Et praesentium eos nulla qui commodi consectetur beatae fugiat. Veniam
-                iste rerum perferendis.</p>
-              <ul class="list-unstyled ul-check primary">
-                <li>Customer Experience</li>
-                <li>Product Management</li>
-                <li>Proof of Concept</li>
-              </ul>
+              <h2 class="text-primary">Select Your Favourite Tag</h2>
+              <p class="mb-4">With a list of different tags available, simply pick the best tag that suits your needs or tastes then use the
+                various customization templates to turn it into a design that’s uniquely yours.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="p-3 box-with-humber">
               <div class="number-behind">02.</div>
-              <h2 class="text-primary">Create</h2>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Et praesentium eos nulla qui commodi consectetur beatae fugiat. Veniam
-                iste rerum perferendis.</p>
-              <ul class="list-unstyled ul-check primary">
-                <li>Web Design</li>
-                <li>Branding</li>
-                <li>Web &amp; App Development</li>
-              </ul>
+              <h2 class="text-primary">Choose your Template</h2>
+              <p class="mb-4">From the selection of images ranging from abstract patterns, textures, and flat lay images available, select any image of
+                your choice and edit the font and color of your text that you need to use in your template.</p>
             </div>
           </div>
           <div class="col-md-6 col-lg-4">
             <div class="p-3 box-with-humber">
               <div class="number-behind">03.</div>
-              <h2 class="text-primary">Scale</h2>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Et praesentium eos nulla qui commodi consectetur beatae fugiat. Veniam
-                iste rerum perferendis.</p>
-              <ul class="list-unstyled ul-check primary">
-                <li>Social Media</li>
-                <li>Paid Campaigns</li>
-                <li>Marketing &amp; SEO</li>
-              </ul>
+              <h2 class="text-primary" style="margin-bottom: 13%;">Download Your Pdf</h2>
+              <p class="mb-4">Enter your email address to get access to your printable PDF and "voila!" Your done.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="site-section" id="work-section">
+
+
+    <!-- <section class="site-section" >
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-8 text-center">
-            <h2 class="text-black h1 site-section-heading text-center">Our Works</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores, itaque neque, delectus
-              odio iure explicabo.</p>
+            <h2 class="text-black h1 site-section-heading text-center">FAQ</h2>
           </div>
         </div>
       </div>
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-6 col-lg-4">
-            <a href="https://colorlib.com/preview/theme/create/images/img_1.jpg" class="media-1"
-              data-fancybox="gallery">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_1.jpg" alt="Image"
-                class="img-fluid">
-              <div class="media-1-content">
-                <h2>Bonzai Tree</h2>
-                <span class="category">Web Application</span>
-              </div>
-            </a>
+            <div class="p-3 box-with-humber">
+              <h2 class="text-primary" style="margin-bottom: 26%;">What are the editing options provided for my template?</h2>
+              <p class="mb-4">Once you have chosen your template, you can edit the font and color of your text upto a maximum of 1000 characters for text.</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a href="https://colorlib.com/preview/theme/create/images/img_2.jpg" class="media-1"
-              data-fancybox="gallery">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_2.jpg" alt="Image"
-                class="img-fluid">
-              <div class="media-1-content">
-                <h2>Simple Woman</h2>
-                <span class="category">Branding</span>
-              </div>
-            </a>
+            <div class="p-3 box-with-humber">
+              <h2 class="text-primary">How can I navigate back to a different template while editing my template?</h2>
+              <p class="mb-4">You can click on "Select a Design" located on top right corner of the page if you change your mind to use a different template.</p>
+            </div>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a href="https://colorlib.com/preview/theme/create/images/img_3.jpg" class="media-1"
-              data-fancybox="gallery">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_3.jpg" alt="Image"
-                class="img-fluid">
-              <div class="media-1-content">
-                <h2>Fruits</h2>
-                <span class="category">Website</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="https://colorlib.com/preview/theme/create/images/img_4.jpg" class="media-1"
-              data-fancybox="gallery">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_4.jpg" alt="Image"
-                class="img-fluid">
-              <div class="media-1-content">
-                <h2>Design Material</h2>
-                <span class="category">Web Application</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="https://colorlib.com/preview/theme/create/images/img_5.jpg" class="media-1"
-              data-fancybox="gallery">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_5.jpg" alt="Image"
-                class="img-fluid">
-              <div class="media-1-content">
-                <h2>Handy Food</h2>
-                <span class="category">Branding</span>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="https://colorlib.com/preview/theme/create/images/img_6.jpg" class="media-1"
-              data-fancybox="gallery">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_6.jpg" alt="Image"
-                class="img-fluid">
-              <div class="media-1-content">
-                <h2>Cat With Cup</h2>
-                <span class="category">Website</span>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="section ft-feature-1">
-      <div class="container">
-        <div class="row align-items-stretch">
-          <div class="col-12 bg-black w-100 ft-feature-1-content">
-            <div class="row align-items-center">
-              <div class="col-lg-5">
-                <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/about_1.jpg"
-                  alt="Image" class="img-fluid mb-4 mb-lg-0">
-              </div>
-              <div class="col-lg-3 ml-auto">
-                <div class="mb-5">
-                  <h3 class="d-flex align-items-center"><span
-                      class="icon icon-beach_access mr-2"></span><span>Strategy</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-                <div>
-                  <h3 class="d-flex align-items-center"><span class="icon icon-build mr-2"></span><span>Web
-                      Development</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
-              <div class="col-lg-3">
-                <div class="mb-5">
-                  <h3 class="d-flex align-items-center"><span class="icon icon-format_paint mr-2"></span><span>Art
-                      Direction</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-                <div>
-                  <h3 class="d-flex align-items-center"><span
-                      class="icon icon-question_answer mr-2"></span><span>Copywriting</span></h3>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab nihil quam nesciunt.</p>
-                  <p><a href="#">Read More</a></p>
-                </div>
-              </div>
+            <div class="p-3 box-with-humber">
+              <h2 class="text-primary" style="margin-bottom: 13%;">How can I have more customizations and changes in my template?</h2>
+              <p class="mb-4">You can always reach out to us at any point of time. To do so, click on "Contact Us" and feel free to share your thoughts. </p>
             </div>
           </div>
         </div>
       </div>
-    </section>
-    <section class="site-section testimonial-wrap">
+    </section> -->
+
+    <section class="site-section" id="faq">
       <div class="container">
-        <div class="row justify-content-center">
+        <div class="row mb-5 justify-content-center">
           <div class="col-md-8 text-center">
-            <h2 class="text-black h1 site-section-heading text-center">Testimonials</h2>
+            <h2 class="text-black h1 site-section-heading text-center">FAQ</h2>
           </div>
         </div>
       </div>
-      <div class="slide-one-item home-slider owl-carousel owl-loaded owl-drag">
 
-
-
-
-        <div class="owl-stage-outer">
-          <div class="owl-stage"
-            style="transform: translate3d(-2525px, 0px, 0px); transition: all 0s ease 0s; width: 10102px;">
-            <div class="owl-item cloned" style="width: 1262.67px;">
-              <div>
-                <div class="testimonial">
-                  <blockquote class="mb-5">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                      unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi
-                      minima fuga beatae illum eligendi incidunt consequatur. Amet dolores
-                      excepturi earum unde iusto.”</p>
-                  </blockquote>
-                  <figure class="mb-4 d-flex align-items-center justify-content-center">
-                    <div><img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_4.jpg"
-                        alt="Image" class="w-50 img-fluid mb-3"></div>
-                    <p>Robert Spears</p>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="owl-item cloned" style="width: 1262.67px;">
-              <div>
-                <div class="testimonial">
-                  <blockquote class="mb-5">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                      unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi
-                      minima fuga beatae illum eligendi incidunt consequatur. Amet dolores
-                      excepturi earum unde iusto.”</p>
-                  </blockquote>
-                  <figure class="mb-4 d-flex align-items-center justify-content-center">
-                    <div><img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_5.jpg"
-                        alt="Image" class="w-50 img-fluid mb-3"></div>
-                    <p>Bruce Rogers</p>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="owl-item active" style="width: 1262.67px;">
-              <div>
-                <div class="testimonial">
-                  <blockquote class="mb-5">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                      unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi
-                      minima fuga beatae illum eligendi incidunt consequatur. Amet dolores
-                      excepturi earum unde iusto.”</p>
-                  </blockquote>
-                  <figure class="mb-4 d-flex align-items-center justify-content-center">
-                    <div><img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_3.jpg"
-                        alt="Image" class="w-50 img-fluid mb-3"></div>
-                    <p>John Smith</p>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="owl-item" style="width: 1262.67px;">
-              <div>
-                <div class="testimonial">
-                  <blockquote class="mb-5">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                      unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi
-                      minima fuga beatae illum eligendi incidunt consequatur. Amet dolores
-                      excepturi earum unde iusto.”</p>
-                  </blockquote>
-                  <figure class="mb-4 d-flex align-items-center justify-content-center">
-                    <div><img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_2.jpg"
-                        alt="Image" class="w-50 img-fluid mb-3"></div>
-                    <p>Christine Aguilar</p>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="owl-item" style="width: 1262.67px;">
-              <div>
-                <div class="testimonial">
-                  <blockquote class="mb-5">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                      unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi
-                      minima fuga beatae illum eligendi incidunt consequatur. Amet dolores
-                      excepturi earum unde iusto.”</p>
-                  </blockquote>
-                  <figure class="mb-4 d-flex align-items-center justify-content-center">
-                    <div><img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_4.jpg"
-                        alt="Image" class="w-50 img-fluid mb-3"></div>
-                    <p>Robert Spears</p>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="owl-item" style="width: 1262.67px;">
-              <div>
-                <div class="testimonial">
-                  <blockquote class="mb-5">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                      unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi
-                      minima fuga beatae illum eligendi incidunt consequatur. Amet dolores
-                      excepturi earum unde iusto.”</p>
-                  </blockquote>
-                  <figure class="mb-4 d-flex align-items-center justify-content-center">
-                    <div><img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_5.jpg"
-                        alt="Image" class="w-50 img-fluid mb-3"></div>
-                    <p>Bruce Rogers</p>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="owl-item cloned" style="width: 1262.67px;">
-              <div>
-                <div class="testimonial">
-                  <blockquote class="mb-5">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                      unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi
-                      minima fuga beatae illum eligendi incidunt consequatur. Amet dolores
-                      excepturi earum unde iusto.”</p>
-                  </blockquote>
-                  <figure class="mb-4 d-flex align-items-center justify-content-center">
-                    <div><img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_3.jpg"
-                        alt="Image" class="w-50 img-fluid mb-3"></div>
-                    <p>John Smith</p>
-                  </figure>
-                </div>
-              </div>
-            </div>
-            <div class="owl-item cloned" style="width: 1262.67px;">
-              <div>
-                <div class="testimonial">
-                  <blockquote class="mb-5">
-                    <p>“Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur
-                      unde reprehenderit aperiam quaerat fugiat repudiandae explicabo animi
-                      minima fuga beatae illum eligendi incidunt consequatur. Amet dolores
-                      excepturi earum unde iusto.”</p>
-                  </blockquote>
-                  <figure class="mb-4 d-flex align-items-center justify-content-center">
-                    <div><img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_2.jpg"
-                        alt="Image" class="w-50 img-fluid mb-3"></div>
-                    <p>Christine Aguilar</p>
-                  </figure>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div class="accordion container" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <h2 class="mb-0">
+        <div class="btn">
+          <h5 class="mb-0">What are the editing options provided for my template?</h5>
         </div>
-        <div class="owl-nav">
-          <div class="owl-prev"><span class="icon-keyboard_arrow_left"></span></div>
-          <div class="owl-next"><span class="icon-keyboard_arrow_right"></span></div>
-        </div>
-        <div class="owl-dots">
-          <div class="owl-dot active"><span></span></div>
-          <div class="owl-dot"><span></span></div>
-          <div class="owl-dot"><span></span></div>
-          <div class="owl-dot"><span></span></div>
-        </div>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        Once you have chosen your template, you can edit the font and color of your text upto a maximum of 1000 characters for text.
       </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+      <h2 class="mb-0">
+        <div class="btn">
+          <h5 class="mb-0">How can I navigate back to a different template while editing my template?</h5>
+        </div>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        You can click on "Select a Design" located on top right corner of the page if you change your mind to use a different template.
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
+      <h2 class="mb-0">
+        <div class="btn">
+          <h5 class="mb-0">How can I have more customizations and changes in my template?</h5>
+        </div>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        You can always reach out to us at any point of time. To do so, click on "Contact Us" and feel free to share your thoughts.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     </section>
-    <section class="site-section border-bottom" id="services-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center aos-init" data-aos="fade-up">
-            <h2 class="text-black h1 site-section-heading text-center">Our Services</h2>
-          </div>
-        </div>
-        <div class="row align-items-stretch">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 aos-init" data-aos="fade-up">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-laptop2"></span></div>
-              <div>
-                <h3>Web Design</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 aos-init" data-aos="fade-up" data-aos-delay="100">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-shopping_cart"></span></div>
-              <div>
-                <h3>eCommerce</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 aos-init" data-aos="fade-up" data-aos-delay="200">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-question_answer"></span></div>
-              <div>
-                <h3>Web Applications</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 aos-init" data-aos="fade-up" data-aos-delay="300">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-format_paint"></span></div>
-              <div>
-                <h3>Branding</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 aos-init" data-aos="fade-up" data-aos-delay="400">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-extension"></span></div>
-              <div>
-                <h3>Copy Writing</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4 aos-init" data-aos="fade-up" data-aos-delay="500">
-            <div class="unit-4 d-flex">
-              <div class="unit-4-icon mr-4"><span class="text-primary icon-phonelink"></span></div>
-              <div>
-                <h3>Mobile Applications</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi
-                  at.</p>
-                <p><a href="#">Learn More</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
+
     <div class="site-section" id="about-section">
       <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-12 text-center">
+            <h2 class="text-black h1 site-section-heading text-center">About Us</h2>
+          </div>
+        </div>
         <div class="row mb-5">
           <div class="col-md-5 ml-auto mb-5 order-md-2 aos-init" data-aos="fade">
             <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/about_1.jpg" alt="Image"
@@ -469,162 +191,19 @@
           <div class="col-md-6 order-md-1 aos-init" data-aos="fade">
             <div class="row">
               <div class="col-12">
-                <div class="text-left pb-1">
-                  <h2 class="text-black h1 site-section-heading">About Us</h2>
-                </div>
               </div>
               <div class="col-12 mb-4">
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing
-                  elit. Eveniet incidunt magnam corrupti, odit eos harum quaerat nostrum
-                  voluptatibus aspernatur eligendi accusantium cum, impedit blanditiis
-                  voluptate commodi doloribus, nemo dignissimos recusandae.</p>
-              </div>
-              <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
-                <div class="unit-4">
-                  <div class="unit-4-icon mr-4 mb-3"><span class="text-secondary icon-phonelink"></span></div>
-                  <div>
-                    <h3>Web &amp; Mobile Specialties</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis consect.</p>
-                    <p class="mb-0"><a href="#">Learn More</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
-                <div class="unit-4">
-                  <div class="unit-4-icon mr-4 mb-3"><span class="text-secondary icon-extension"></span></div>
-                  <div>
-                    <h3>Intuitive Thinkers</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis.</p>
-                    <p class="mb-0"><a href="#">Learn More</a></p>
-                  </div>
-                </div>
+                <p class="lead">Our team focuses on design and developing high quality tags and templates for anyone from individuals
+                  to large companies can create amazing visual assets for their brand regardless of technical or artistic skills. We take pride in
+                turning complex design and layout themes into easy to customize and download the template for our users. </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="site-section border-bottom" id="team-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-7 text-center">
-            <h2 class="text-black h1 site-section-heading">Our Team</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 aos-init" data-aos="fade" data-aos-delay="100">
-            <div class="person text-center">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_2.jpg"
-                alt="Image" class="img-fluid rounded-circle w-50 mb-5">
-              <h3>John Rooster</h3>
-              <p class="position text-muted">Co-Founder, President</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nisi at consequatur unde molestiae quidem provident voluptatum deleniti
-                quo iste error eos est praesentium distinctio cupiditate tempore
-                suscipit inventore deserunt tenetur.</p>
-              <ul class="ul-social-circle">
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 aos-init" data-aos="fade" data-aos-delay="200">
-            <div class="person text-center">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_3.jpg"
-                alt="Image" class="img-fluid rounded-circle w-50 mb-5">
-              <h3>Tom Sharp</h3>
-              <p class="position text-muted">Co-Founder, COO</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nisi at consequatur unde molestiae quidem provident voluptatum deleniti
-                quo iste error eos est praesentium distinctio cupiditate tempore
-                suscipit inventore deserunt tenetur.</p>
-              <ul class="ul-social-circle">
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-5 mb-lg-0 aos-init" data-aos="fade" data-aos-delay="300">
-            <div class="person text-center">
-              <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/person_4.jpg"
-                alt="Image" class="img-fluid rounded-circle w-50 mb-5">
-              <h3>Winston Hodson</h3>
-              <p class="position text-muted">Marketing</p>
-              <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Nisi at consequatur unde molestiae quidem provident voluptatum deleniti
-                quo iste error eos est praesentium distinctio cupiditate tempore
-                suscipit inventore deserunt tenetur.</p>
-              <ul class="ul-social-circle">
-                <li><a href="#"><span class="icon-facebook"></span></a></li>
-                <li><a href="#"><span class="icon-twitter"></span></a></li>
-                <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                <li><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <section class="site-section" id="blog-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5">
-          <div class="col-md-8 text-center">
-            <h2 class="text-black h1 site-section-heading text-center">Blog</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <a href="https://colorlib.com/preview/theme/create/single.html"><img
-                  src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_1.jpg" alt="Image"
-                  class="img-fluid"></a>
-              <h2 class="font-size-regular"><a href="https://colorlib.com/preview/theme/create/single.html">Create
-                  Beautiful Website In Less Than An Hour</a></h2>
-              <div class="meta mb-4">Ham Brook <span class="mx-2">•</span> Jan 18, 2019<span class="mx-2">•</span> <a
-                  href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit
-                quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <a href="https://colorlib.com/preview/theme/create/single.html"><img
-                  src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_2.jpg" alt="Image"
-                  class="img-fluid"></a>
-              <h2 class="font-size-regular"><a href="https://colorlib.com/preview/theme/create/single.html">Create
-                  Beautiful Website In Less Than An Hour</a></h2>
-              <div class="meta mb-4">James Phelps <span class="mx-2">•</span> Jan 18, 2019<span class="mx-2">•</span> <a
-                  href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit
-                quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 mb-4 mb-lg-4">
-            <div class="h-entry">
-              <a href="https://colorlib.com/preview/theme/create/single.html"><img
-                  src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/img_1.jpg" alt="Image"
-                  class="img-fluid"></a>
-              <h2 class="font-size-regular"><a href="https://colorlib.com/preview/theme/create/single.html">Create
-                  Beautiful Website In Less Than An Hour</a></h2>
-              <div class="meta mb-4">James Phelps <span class="mx-2">•</span> Jan 18, 2019<span class="mx-2">•</span> <a
-                  href="#">News</a></div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-                eligendi nobis ea maiores sapiente veritatis reprehenderit suscipit
-                quaerat rerum voluptatibus a eius.</p>
-              <p><a href="#">Continue Reading...</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
     <section class="site-section bg-light" id="contact-section">
       <div class="container">
         <div class="row mb-5">
@@ -685,7 +264,7 @@
         </div>
       </div>
     </section>
-    <a href="#" class="bg-primary py-5 d-block">
+    <a href="home.php" class="bg-primary py-5 d-block">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md10">
@@ -694,7 +273,7 @@
         </div>
       </div>
     </a>
-    <footer class="site-footer">
+    <!-- <footer class="site-footer">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
@@ -753,7 +332,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
   <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery-3.js"
     type="text/javascript"></script>
@@ -793,6 +372,9 @@
       loop: true,
       showCursor: true
     });
+
+
+
   </script>
   <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/main.js"
     type="text/javascript"></script>

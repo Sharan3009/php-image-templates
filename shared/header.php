@@ -6,7 +6,11 @@
     </div>
     <div class="site-mobile-menu-body">
       <ul class="site-nav-wrap">
-        <li><a href="home.php" class="nav-link active"><?php echo $config_toggle_to_design_btn_text?></a></li>
+        <!-- <li><a href="home.php" class="nav-link active"><?php echo $config_toggle_to_design_btn_text?></a></li>
+        <li><a href="#how_to_design" class="nav-link"><?php echo "How To Design" ?></a></li>
+        <li><a href="#faq" class="nav-link"><?php echo "FAQ" ?></a></li>
+        <li><a href="#about_us" class="nav-link"><?php echo "About Us" ?></a></li>
+        <li><a href="#contact_us" class="nav-link"><?php echo "Contact Us" ?></a></li> -->
       </ul>
     </div>
   </div>
@@ -24,6 +28,10 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="home.php" class="nav-link active"><?php echo $config_toggle_to_design_btn_text?></a></li>
+                <li><a href="landing.php#how_to_design" class="nav-link"><?php echo "How To Design" ?></a></li>
+                <li><a href="landing.php#faq" class="nav-link"><?php echo "FAQ" ?></a></li>
+                <li><a href="landing.php#about-section" class="nav-link"><?php echo "About Us" ?></a></li>
+                <li><a href="landing.php#contact-section" class="nav-link"><?php echo "Contact Us" ?></a></li>
               </ul>
             </nav>
           </div>
