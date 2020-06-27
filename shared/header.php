@@ -1,19 +1,12 @@
 <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
-      </div>
-    </div>
-    <div class="site-mobile-menu-body">
-      <ul class="site-nav-wrap">
-        <li><a href="home.php" class="nav-link"><?php echo $config_toggle_to_design_btn_text?></a></li>
-        <li><a href="#how_to_design" class="nav-link"><?php echo "How To Design" ?></a></li>
-        <li><a href="#faq" class="nav-link"><?php echo "FAQ" ?></a></li>
-        <li><a href="#about_us" class="nav-link"><?php echo "About Us" ?></a></li>
-        <li><a href="#contact_us" class="nav-link"><?php echo "Contact Us" ?></a></li>
-      </ul>
+  <div class="site-mobile-menu-header">
+    <div class="site-mobile-menu-close mt-3">
+      <span class="fa fa-close js-menu-toggle"></span>
     </div>
   </div>
+  <div class="site-mobile-menu-body">
+  </div>
+</div>
   <div id="sticky-wrapper" class="sticky-wrapper">
     <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target border-bottom" role="banner">
       <div class="container">
@@ -33,8 +26,9 @@
               </ul>
             </nav>
           </div>
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#"
-              class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+            <span class="fa fa-bars site-menu-toggle js-menu-toggle text-black"></span>
+          </div>
         </div>
       </div>
     </header>

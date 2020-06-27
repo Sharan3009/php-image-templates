@@ -6,6 +6,7 @@
   <title>Create — Onepage Website Template by Colorlib</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <?php include "shared/minimal-css.php" ?>
   <link href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/css.css" rel="stylesheet">
   <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/style.css">
   <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/bootstrap.css">
