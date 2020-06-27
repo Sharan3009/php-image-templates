@@ -7,7 +7,6 @@
 jQuery(document).ready(function($) {
 
   	"use strict";
-  handleScrollToHash();
 
 	var siteMenuClone = function() {
 
@@ -213,9 +212,8 @@ jQuery(document).ready(function($) {
 	// navigation
   var OnePageNavigation = function() {
     var navToggler = $('.site-menu-toggle');
-   	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
+   	$("body").on("click", ".main-menu li a[href*='#'], .smoothscroll[href*='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
       e.preventDefault();
-
       var hash = this.hash;
 
       $('html, body').animate({
@@ -229,9 +227,6 @@ jQuery(document).ready(function($) {
   OnePageNavigation();
 
   var siteScroll = function() {
-
-
-
   	$(window).scroll(function() {
 
   		var st = $(this).scrollTop();
@@ -242,23 +237,7 @@ jQuery(document).ready(function($) {
   			$('.js-sticky-header').removeClass('shrink');
   		}
   	})
-
   };
   siteScroll();
 
 });
-
-function handleScrollToHash(){
-  document.querySelectorAll('a[href*="#"]').forEach(anchor => {
-   anchor.addEventListener('click', function (e) {
-       e.preventDefault();
-       let hash = this.getAttribute('href').split("#").pop();
-	   $('html, body').animate({
-        scrollTop: $("#"+hash).offset().top
-      }, 200, function(){
-		// Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-   });
-});
-}
