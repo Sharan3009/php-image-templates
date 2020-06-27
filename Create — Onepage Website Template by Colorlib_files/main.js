@@ -7,7 +7,7 @@
 jQuery(document).ready(function($) {
 
   	"use strict";
-  handleHashChangeSmoothScroll();
+  handleScrollToHash();
 
 	var siteMenuClone = function() {
 
@@ -248,15 +248,17 @@ jQuery(document).ready(function($) {
 
 });
 
-function handleHashChangeSmoothScroll(){
+function handleScrollToHash(){
   document.querySelectorAll('a[href*="#"]').forEach(anchor => {
    anchor.addEventListener('click', function (e) {
        e.preventDefault();
-       let id = this.getAttribute('href').split("#").pop();
-       document.querySelector("#"+id).scrollIntoView({
-           behavior: 'smooth'
-       });
-       setTimeout(function(){window.location.hash = id;},200);
+       let hash = this.getAttribute('href').split("#").pop();
+	   $('html, body').animate({
+        scrollTop: $("#"+hash).offset().top
+      }, 200, function(){
+		// Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
    });
 });
 }
