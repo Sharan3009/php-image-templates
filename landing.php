@@ -7,19 +7,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <?php include "shared/minimal-css.php" ?>
-  <link href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/css.css" rel="stylesheet">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/style.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/bootstrap.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery-ui.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/owl_002.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/owl.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/owl.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery.css">
-  <link rel="stylesheet"
-    href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/bootstrap-datepicker.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/flaticon.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/aos.css">
-  <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/style_002.css">
+  <link href="assets/css/css.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/style_002.css">
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"
@@ -148,7 +138,7 @@
         </div>
         <div class="row mb-5">
           <div class="col-md-5 ml-auto mb-5 order-md-2 aos-init" data-aos="fade">
-            <img src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/about_1.jpg" alt="Image"
+            <img src="assets/images/about_1.jpg" alt="Image"
               class="img-fluid rounded">
           </div>
           <div class="col-md-6 order-md-1 aos-init" data-aos="fade">
@@ -245,31 +235,9 @@
       </div>
     </footer>
   </div>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery-3.js"
+  <script src="assets/js/aos.js"
     type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery-migrate-3.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery-ui.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/popper.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/bootstrap.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/owl.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery_004.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/bootstrap-datepicker.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery_005.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/aos.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery_002.js"
-    type="text/javascript"></script>
-  <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/typed.js"
+  <script src="assets/js/typed.js"
     type="text/javascript"></script>
   <script type="text/javascript">
     var typed = new Typed('.typed-words', {
@@ -290,15 +258,6 @@
   });
   </script>
   <?php include "shared/minimal-js.php" ?>
-  <script async="" src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/js"
-    type="text/javascript"></script>
-  <script type="text/javascript">
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-23581568-13');
-  </script>
 
   <style type="text/css" data-typed-js-css="true">
     .typed-cursor {
