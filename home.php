@@ -85,11 +85,7 @@
       <div class="accordion container" id="accordionExample">
         <div class="card">
           <div class="card-header" id="headingOne" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <h2 class="mb-0">
-              <div class="btn">
-                <h5 class="mb-0">What are the editing options provided for my template?</h5>
-              </div>
-            </h2>
+              <h5 class="mb-0 p-2">What are the editing options provided for my template?</h5>
           </div>
 
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -100,11 +96,7 @@
         </div>
         <div class="card">
           <div class="card-header" id="headingTwo" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <h2 class="mb-0">
-              <div class="btn">
-                <h5 class="mb-0">How can I navigate back to a different template while editing my template?</h5>
-              </div>
-            </h2>
+              <h5 class="mb-0 p-2">How can I navigate back to a different template while editing my template?</h5>
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
@@ -114,11 +106,7 @@
         </div>
         <div class="card">
           <div class="card-header" id="headingThree" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
-            <h2 class="mb-0">
-              <div class="btn">
-                <h5 class="mb-0">How can I have more customizations and changes in my template?</h5>
-              </div>
-            </h2>
+              <h5 class="mb-0 p-2">How can I have more customizations and changes in my template?</h5>
           </div>
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
