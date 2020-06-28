@@ -24,8 +24,10 @@
             <div class="row justify-content-center mb-4">
               <div class="col-12 text-center">
                 <h1 class="mb-5">Gorgeous place cards for your <span class="typed-words"></span></h1>
-                <div><a data-fancybox="" data-ratio="2" href="templates.php"
-                    class="btn btn-primary btn-md"><?php echo $config_toggle_to_design_btn_text?></a></div>
+                <div>
+                  <a data-fancybox="" data-ratio="2" href="templates.php"
+                    class="btn btn-primary btn-md"><?php echo $config_toggle_to_design_btn_text?></a>
+                </div>
               </div>
             </div>
           </div>
@@ -139,6 +141,12 @@
       </div>
     </section>
 
+    <section class="sticky-footer bg-white text-center py-2 shadow" id="sticky-footer" style="transform:translateY(100%)">
+      <div>
+        <a data-fancybox="" data-ratio="2" href="templates.php"
+          class="btn btn-primary btn-md"><?php echo $config_toggle_to_design_btn_text?></a>
+      </div>
+    </section>
 
     <section class="site-section bg-light" id="contact" data-aos="fade">
       <div class="container">
