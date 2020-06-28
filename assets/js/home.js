@@ -14,7 +14,7 @@ $(document).ready(function(){
     onLoadMoreHandler();
     onTemplateSelect();
     onTextColorSelect();
-    onToggleToDesignsHandler();
+    onToggleToTemplatesHandler();
     onDownloadClickHandler();
     onGenerateTempatesHandler();
     onEmailInputHandler();
@@ -223,8 +223,8 @@ function onTemplateSelect(){
     })
 }
 
-function onToggleToDesignsHandler(){
-    $("#toggleToDesigns").on("click",function(){
+function onToggleToTemplatesHandler(){
+    $("#toggleToTemplates").on("click",function(){
         $("#select-templates").removeClass("d-none");
         $("#generatePdf").addClass("d-none");
     })

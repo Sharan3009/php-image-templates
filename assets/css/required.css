@@ -17,3 +17,7 @@
 .break-long-word{
     overflow-wrap: break-word;
 }
+
+.clickable{
+    cursor: pointer;
+}

@@ -1,7 +1,13 @@
 <div class="flex-grow-overflow px-5">
     <div class="text-center py-3">
-        <h2 class="mb-3">Preview</h2>
         <div class="col-lg-9 col-12 mx-auto">
+            <div class="position-relative">
+                <h4 class="h-100 position-absolute d-flex align-items-center text-primary clickable" id="toggleToTemplates">
+                    <i class="fa fa-angle-left"></i>
+                    <div class="ml-2 d-md-block d-none">Back</div>
+                </h4>
+                <h2 class="mb-3">Preview</h2>
+            </div>
             <div class="template-shadow p-2">
                 <?php include "shared/template-preview.php" ?>
            </div>
