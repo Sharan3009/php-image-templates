@@ -83,39 +83,6 @@
       </div>
     </section>
 
-
-    <!-- <section class="site-section" >
-      <div class="container">
-        <div class="row mb-5 justify-content-center">
-          <div class="col-md-8 text-center">
-            <h2 class="text-black h1 site-section-heading text-center">FAQ</h2>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 box-with-humber">
-              <h2 class="text-primary" style="margin-bottom: 26%;">What are the editing options provided for my template?</h2>
-              <p class="mb-4">Once you have chosen your template, you can edit the font and color of your text upto a maximum of 1000 characters for text.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 box-with-humber">
-              <h2 class="text-primary">How can I navigate back to a different template while editing my template?</h2>
-              <p class="mb-4">You can click on "Select a Design" located on top right corner of the page if you change your mind to use a different template.</p>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <div class="p-3 box-with-humber">
-              <h2 class="text-primary" style="margin-bottom: 13%;">How can I have more customizations and changes in my template?</h2>
-              <p class="mb-4">You can always reach out to us at any point of time. To do so, click on "Contact Us" and feel free to share your thoughts. </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <section class="site-section" id="faq">
       <div class="container">
         <div class="row mb-5 justify-content-center">
@@ -126,58 +93,53 @@
       </div>
 
       <div class="accordion container" id="accordionExample">
-  <div class="card">
-    <div class="card-header" id="headingOne" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-      <h2 class="mb-0">
-        <div class="btn">
-          <h5 class="mb-0">What are the editing options provided for my template?</h5>
+        <div class="card">
+          <div class="card-header" id="headingOne" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <h2 class="mb-0">
+              <div class="btn">
+                <h5 class="mb-0">What are the editing options provided for my template?</h5>
+              </div>
+            </h2>
+          </div>
+
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body">
+              Once you have chosen your template, you can edit the font and color of your text upto a maximum of 1000 characters for text.
+            </div>
+          </div>
         </div>
-      </h2>
-    </div>
-
-    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="card-body">
-        Once you have chosen your template, you can edit the font and color of your text upto a maximum of 1000 characters for text.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingTwo" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-      <h2 class="mb-0">
-        <div class="btn">
-          <h5 class="mb-0">How can I navigate back to a different template while editing my template?</h5>
+        <div class="card">
+          <div class="card-header" id="headingTwo" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+            <h2 class="mb-0">
+              <div class="btn">
+                <h5 class="mb-0">How can I navigate back to a different template while editing my template?</h5>
+              </div>
+            </h2>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body">
+              You can click on "Select a Design" located on top right corner of the page if you change your mind to use a different template.
+            </div>
+          </div>
         </div>
-      </h2>
-    </div>
-    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="card-body">
-        You can click on "Select a Design" located on top right corner of the page if you change your mind to use a different template.
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header" id="headingThree" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
-      <h2 class="mb-0">
-        <div class="btn">
-          <h5 class="mb-0">How can I have more customizations and changes in my template?</h5>
+        <div class="card">
+          <div class="card-header" id="headingThree" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
+            <h2 class="mb-0">
+              <div class="btn">
+                <h5 class="mb-0">How can I have more customizations and changes in my template?</h5>
+              </div>
+            </h2>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+              You can always reach out to us at any point of time. To do so, click on "Contact Us" and feel free to share your thoughts.
+            </div>
+          </div>
         </div>
-      </h2>
-    </div>
-    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-      <div class="card-body">
-        You can always reach out to us at any point of time. To do so, click on "Contact Us" and feel free to share your thoughts.
       </div>
-    </div>
-  </div>
-</div>
-
-
-
     </section>
 
-
-
-    <div class="site-section" id="about-section">
+    <section class="site-section" id="about-section">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-12 text-center">
@@ -202,7 +164,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
 
     <section class="site-section bg-light" id="contact-section">
@@ -265,75 +227,23 @@
         </div>
       </div>
     </section>
-    <a href="home.php" class="bg-primary py-5 d-block">
+
+    <footer class="site-footer">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md10">
-            <h2 class="text-white">Let's Get Started</h2>
-          </div>
-        </div>
-      </div>
-    </a>
-    <!-- <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-9">
-            <div class="row">
-              <div class="col-md-5">
-                <h2 class="footer-heading mb-4">About Us</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere
-                  laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis
-                  aliquam.</p>
-              </div>
-              <div class="col-md-3 ml-auto">
-                <h2 class="footer-heading mb-4">Features</h2>
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                </ul>
-              </div>
-              <div class="col-md-3">
-                <h2 class="footer-heading mb-4">Follow Us</h2>
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <h2 class="footer-heading mb-4">Subscribe Newsletter</h2>
-            <form action="#" method="post">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control border-secondary text-white bg-transparent"
-                  placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-primary text-white" type="button" id="button-addon2">Send</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="row pt-5 mt-5 text-center">
+        <div class="row text-center">
           <div class="col-md-12">
-            <div class="border-top pt-5">
+            <div class="border-top pt-2">
               <p>
-
                 Copyright ©
-                <script type="text/javascript" async=""
-                  src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/analytics.js"></script>
                 <script type="text/javascript">document.write(new Date().getFullYear());</script>2020 All rights
-                reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a
+                reserved | This template is made with <i class="fa fa-heart text-danger" aria-hidden="true"></i> by <a
                   href="https://colorlib.com/" target="_blank">Colorlib</a>
-
               </p>
             </div>
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
   </div>
   <script src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery-3.js"
     type="text/javascript"></script>
@@ -371,9 +281,13 @@
       loop: true,
       showCursor: true
     });
-
-
-
+  </script>
+  <script>
+   AOS.init({
+    duration: 800,
+    easing: 'slide',
+    once: true
+  });
   </script>
   <?php include "shared/minimal-js.php" ?>
   <script async="" src="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/js"
