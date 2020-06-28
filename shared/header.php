@@ -19,10 +19,10 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                 <li><a href="templates.php" class="nav-link"><?php echo $config_toggle_to_design_btn_text?></a></li>
-                <li><a href="home.php#how_to_design" class="nav-link"><?php echo "How To Design" ?></a></li>
-                <li><a href="home.php#faq" class="nav-link"><?php echo "FAQ" ?></a></li>
-                <li><a href="home.php#about-section" class="nav-link"><?php echo "About Us" ?></a></li>
-                <li><a href="home.php#contact-section" class="nav-link"><?php echo "Contact Us" ?></a></li>
+                <li><a href="home.php#how_to_design" class="nav-link">How To Design</a></li>
+                <li><a href="home.php#faq" class="nav-link">FAQ</a></li>
+                <li><a href="home.php#about-section" class="nav-link">About Us</a></li>
+                <li><a href="home.php#contact-section" class="nav-link">Contact Us</a></li>
               </ul>
             </nav>
           </div>
