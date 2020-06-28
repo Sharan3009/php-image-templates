@@ -7,8 +7,8 @@
   <div class="site-mobile-menu-body">
   </div>
 </div>
-  <div id="sticky-wrapper" class="sticky-wrapper">
-    <header class="site-navbar py-4 bg-white js-sticky-header site-navbar-target border-bottom" role="banner">
+  <div id="sticky-wrapper" class="sticky-wrapper is-sticky">
+    <header class="site-navbar py-4 bg-white js-sticky-header shrink site-navbar-target border-bottom" role="banner">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-11 col-xl-2">
@@ -26,7 +26,7 @@
               </ul>
             </nav>
           </div>
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;">
+          <div class="d-inline-block d-xl-none ml-auto py-3" style="position: relative; top: 3px;">
             <span class="fa fa-bars site-menu-toggle js-menu-toggle text-black"></span>
           </div>
         </div>
