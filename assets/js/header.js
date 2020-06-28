@@ -70,11 +70,6 @@ jQuery(document).ready(function($) {
 	};
 	siteMenuClone();
 
-	var siteSticky = function() {
-		$(".js-sticky-header").sticky({topSpacing:0,zIndex:2});
-	};
-	siteSticky();
-
 	// navigation
   var OnePageNavigation = function() {
     var navToggler = $('.site-menu-toggle');

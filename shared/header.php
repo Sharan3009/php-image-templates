@@ -7,8 +7,8 @@
   <div class="site-mobile-menu-body">
   </div>
 </div>
-  <div id="sticky-wrapper" class="sticky-wrapper is-sticky">
-    <header class="site-navbar py-4 bg-white js-sticky-header shrink site-navbar-target border-bottom" role="banner">
+  <div id="sticky-wrapper" class="sticky-wrapper is-sticky" style="position:sticky;top:0;">
+    <header class="site-navbar py-4 bg-white shrink site-navbar-target border-bottom" role="banner">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-10 col-md-11 col-xl-2">
