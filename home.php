@@ -15,18 +15,17 @@
   <div class="site-wrap">
     <?php include "config/config.php" ?>
     <?php include "shared/header.php" ?>
-    <div class="site-blocks-cover overlay aos-init aos-animate"
+    <div id="get-started" class="site-blocks-cover overlay aos-init aos-animate"
       style="background-image: url(&quot;assets/images/hero_1.jpg&quot;); background-position: 50% -94.9333px;" data-aos="fade"
       data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
           <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
             <div class="row justify-content-center mb-4">
-              <div class="col-md-8 text-center">
-                <h1>We Love To Build <span class="typed-words"></span></h1>
-                <p class="lead mb-5">Free Web Template by <a href="#" target="_blank">Colorlib</a></p>
-                <div><a data-fancybox="" data-ratio="2" href="https://vimeo.com/317571768"
-                    class="btn btn-primary btn-md">Watch Video</a></div>
+              <div class="col-12 text-center">
+                <h1 class="mb-5">Gorgeous place cards for your <span class="typed-words"></span></h1>
+                <div><a data-fancybox="" data-ratio="2" href="templates.php"
+                    class="btn btn-primary btn-md">Get Started</a></div>
               </div>
             </div>
           </div>
@@ -227,11 +226,11 @@
     type="text/javascript"></script>
   <script type="text/javascript">
     var typed = new Typed('.typed-words', {
-        strings: ["Web Apps", " WordPress", " Mobile Apps"],
+        strings: ["Wedding.", "Party.", "Events."],
         typeSpeed: 80,
         backSpeed: 80,
-        backDelay: 4000,
-        startDelay: 1000,
+        backDelay: 1200,
+        startDelay: 80,
         loop: true,
         showCursor: true
       });

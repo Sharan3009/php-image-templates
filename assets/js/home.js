@@ -218,7 +218,7 @@ function onTemplateSelect(){
         setTimeout(()=>{
             $("#toggleToDesigns").html(`<i class="fa fa-arrow-left mr-3"></i>Back`);
             $("#generatePdf .flex-grow-overflow").scrollTop(0);
-            $("#get-started").addClass("d-none");
+            $("#select-templates").addClass("d-none");
             $("#generatePdf").removeClass("d-none");
         },100);
         setTemplateProperties(this);
@@ -228,7 +228,7 @@ function onTemplateSelect(){
 function onToggleToDesignsHandler(){
     $("#toggleToDesigns").on("click",function(){
         $(this).text(configToggleToDesignBtnText)
-        $("#get-started").removeClass("d-none");
+        $("#select-templates").removeClass("d-none");
         $("#generatePdf").addClass("d-none");
     })
 }

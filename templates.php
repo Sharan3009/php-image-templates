@@ -13,7 +13,7 @@
     <?php include "config/config.php" ?>
     <?php include "shared/header.php" ?>
 
-    <div class="container-fluid parent-flex" id="get-started">
+    <div class="container-fluid parent-flex" id="select-templates">
         <div class="row">
             <div class="col-md-3 d-md-flex d-none parent-flex border-right px-0">
                 <?php include "shared/tags-view.php" ?>
