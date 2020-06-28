@@ -132,7 +132,6 @@ function getTemplates(){
             } else {
                 maintainLoader(selector,false);
                 maintainDataAndError(selector,fn,null,response);
-                drawTemplatesUI(response);
             }
         } else {
             maintainDataAndError(selector,fn,"Error occured while fetching the templates",null);
