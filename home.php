@@ -16,7 +16,7 @@
     <?php include "config/config.php" ?>
     <?php include "shared/header.php" ?>
     <div id="get-started" class="site-blocks-cover overlay aos-init aos-animate"
-      style="background-image: url(&quot;assets/images/hero_1.jpg&quot;); background-position: 50% -94.9333px;" data-aos="fade"
+      style="background-image: url(&quot;assets/images/get_started_bg.jpg&quot;);background-position: 50% -94.9333px;" data-aos="fade"
       data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row align-items-center justify-content-center text-center">
