@@ -215,7 +215,6 @@ function onTemplateSelect(){
     $("#templatesList").on("click",'[name="tagTemplates"]',function(){
         // adding setTimeout so that font's preapply before the text renders and stops abrupt font toggle in text
         setTimeout(()=>{
-            $("#toggleToDesigns").html(`<i class="fa fa-arrow-left mr-3"></i>Back`);
             $("#generatePdf .flex-grow-overflow").scrollTop(0);
             $("#select-templates").addClass("d-none");
             $("#generatePdf").removeClass("d-none");
@@ -226,7 +225,6 @@ function onTemplateSelect(){
 
 function onToggleToDesignsHandler(){
     $("#toggleToDesigns").on("click",function(){
-        $(this).text(configToggleToDesignBtnText)
         $("#select-templates").removeClass("d-none");
         $("#generatePdf").addClass("d-none");
     })
