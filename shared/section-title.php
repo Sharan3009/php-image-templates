@@ -1,5 +1,5 @@
-<h5 class="p-2 border-bottom mb-0 w-100">
+<h5 class="p-3 mb-0 w-100">
     <?php
-        echo $input
+        echo $input . ":"
     ?>
 </h5>

@@ -5,20 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <?php include "shared/minimal-css.php" ?>
-    <link href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/css.css" rel="stylesheet">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/style.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/bootstrap.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery-ui.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/owl_002.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/owl.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/owl.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/jquery.css">
-    <link rel="stylesheet"
-        href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/flaticon.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/aos.css">
-    <link rel="stylesheet" href="Create%20%E2%80%94%20Onepage%20Website%20Template%20by%20Colorlib_files/style_002.css">
-    <!-- <link href="assets/css/fontselect-alternate.css" rel="stylesheet" type="text/css" media="all" /> -->
     <link href="assets/css/home.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body>
