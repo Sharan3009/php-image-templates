@@ -1,6 +1,6 @@
 <div class="flex-grow-overflow px-5">
     <div class="text-center py-3">
-        <h2>Preview</h2>
+        <h2 class="mb-3">Preview</h2>
         <div class="col-lg-9 col-12 mx-auto">
             <div class="template-shadow p-2">
                 <?php include "shared/template-preview.php" ?>
