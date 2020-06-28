@@ -23,8 +23,7 @@
           <div class="col-md-12 aos-init aos-animate" data-aos="fade-up" data-aos-delay="400">
             <div class="row justify-content-center mb-4">
               <div class="col-md-8 text-center">
-                <h1>We Love To Build <span class="typed-words">WordPress</span><span
-                    class="typed-cursor typed-cursor--blink">|</span></h1>
+                <h1>We Love To Build <span class="typed-words"></span></h1>
                 <p class="lead mb-5">Free Web Template by <a href="#" target="_blank">Colorlib</a></p>
                 <div><a data-fancybox="" data-ratio="2" href="https://vimeo.com/317571768"
                     class="btn btn-primary btn-md">Watch Video</a></div>
@@ -221,20 +220,21 @@
       </div>
     </footer>
   </div>
+  <?php include "shared/minimal-js.php" ?>
   <script src="assets/js/aos.js"
     type="text/javascript"></script>
   <script src="assets/js/typed.js"
     type="text/javascript"></script>
   <script type="text/javascript">
     var typed = new Typed('.typed-words', {
-      strings: ["Web Apps", " WordPress", " Mobile Apps"],
-      typeSpeed: 80,
-      backSpeed: 80,
-      backDelay: 4000,
-      startDelay: 1000,
-      loop: true,
-      showCursor: true
-    });
+        strings: ["Web Apps", " WordPress", " Mobile Apps"],
+        typeSpeed: 80,
+        backSpeed: 80,
+        backDelay: 4000,
+        startDelay: 1000,
+        loop: true,
+        showCursor: true
+      });
   </script>
   <script>
    AOS.init({
@@ -243,7 +243,6 @@
     once: true
   });
   </script>
-  <?php include "shared/minimal-js.php" ?>
 
   <style type="text/css" data-typed-js-css="true">
     .typed-cursor {
