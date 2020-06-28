@@ -1,5 +1,5 @@
 <?php $input="Templates"?>
-<div class="flex-grow-overflow parent-flex">
+<div class="flex-grow-overflow">
     <div class="d-flex">
         <?php include "shared/section-title.php"?>
         <div class="dropdown ml-auto d-md-none d-flex align-items-center mr-2">
