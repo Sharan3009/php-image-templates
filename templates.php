@@ -38,6 +38,6 @@
         configCountPerPage = <?php echo $config_count_per_page ?>;
         configToggleToDesignBtnText = "<?php echo $config_toggle_to_design_btn_text ?>";
     </script>
-    <script src="assets/js/home.js" type="text/javascript"></script>
+    <script src="assets/js/templates.js" type="text/javascript"></script>
 </body>
 </html>

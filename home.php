@@ -114,7 +114,7 @@
       </div>
     </section>
 
-    <section class="site-section" id="about" data-aos="fade">
+    <section class="site-section pb-0" id="about" data-aos="fade">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-12 text-center">
@@ -231,56 +231,11 @@
     type="text/javascript"></script>
   <script src="assets/js/typed.js"
     type="text/javascript"></script>
-  <script type="text/javascript">
-    var typed = new Typed('.typed-words', {
-        strings: ["Wedding.", "Party.", "Events."],
-        typeSpeed: 80,
-        backSpeed: 80,
-        backDelay: 1200,
-        startDelay: 80,
-        loop: true,
-        showCursor: true
-      });
-  </script>
+    <script src="assets/js/home.js"
+    type="text/javascript"></script>
   <script>
-   AOS.init({
-    duration: 800,
-    easing: 'slide',
-    once: true
-  });
+
   </script>
-
-  <style type="text/css" data-typed-js-css="true">
-    .typed-cursor {
-      opacity: 1;
-    }
-
-    .typed-cursor.typed-cursor--blink {
-      animation: typedjsBlink 0.7s infinite;
-      -webkit-animation: typedjsBlink 0.7s infinite;
-      animation: typedjsBlink 0.7s infinite;
-    }
-
-    @keyframes typedjsBlink {
-      50% {
-        opacity: 0.0;
-      }
-    }
-
-    @-webkit-keyframes typedjsBlink {
-      0% {
-        opacity: 1;
-      }
-
-      50% {
-        opacity: 0.0;
-      }
-
-      100% {
-        opacity: 1;
-      }
-    }
-  </style>
 </body>
 
 </html>
