@@ -18,11 +18,11 @@
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li><a href="templates.php" class="nav-link"><?php echo $config_toggle_to_design_btn_text?></a></li>
-                <li><a href="home.php#how_to_design" class="nav-link">How To Design</a></li>
-                <li><a href="home.php#faq" class="nav-link">FAQ</a></li>
-                <li><a href="home.php#about-section" class="nav-link">About Us</a></li>
-                <li><a href="home.php#contact-section" class="nav-link">Contact Us</a></li>
+                <li><a href="templates.php" data-target="#get-started" class="nav-link"><?php echo $config_toggle_to_design_btn_text?></a></li>
+                <li><a href="home.php#how-to-design" data-target="#how-to-design" class="nav-link">How To Design</a></li>
+                <li><a href="home.php#faq" data-target="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="home.php#about" data-target="#about" class="nav-link">About Us</a></li>
+                <li><a href="home.php#contact" data-target="#contact" class="nav-link">Contact Us</a></li>
               </ul>
             </nav>
           </div>

@@ -34,7 +34,7 @@
         </div>
       </div>
     </div>
-    <section class="site-section" id="how_to_design">
+    <section class="site-section" id="how-to-design">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-8 text-center">
@@ -115,7 +115,7 @@
       </div>
     </section>
 
-    <section class="site-section" id="about-section">
+    <section class="site-section" id="about">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-12 text-center">
@@ -143,7 +143,7 @@
     </section>
 
 
-    <section class="site-section bg-light" id="contact-section">
+    <section class="site-section bg-light" id="contact">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">

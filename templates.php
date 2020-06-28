@@ -7,13 +7,13 @@
     <?php include "shared/minimal-css.php" ?>
     <link href="assets/css/home.css" rel="stylesheet" type="text/css" media="all" />
 </head>
-<body>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- this apply-font element will stay everytime in order to preload the selected font -->
     <div class="position-fixed apply-font" style="top:-1000px">preload font</div>
     <?php include "config/config.php" ?>
     <?php include "shared/header.php" ?>
 
-    <div class="container-fluid parent-flex" id="selection">
+    <div class="container-fluid parent-flex" id="get-started">
         <div class="row">
             <div class="col-md-3 d-md-flex d-none parent-flex border-right px-0">
                 <?php include "shared/tags-view.php" ?>
