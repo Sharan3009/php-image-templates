@@ -32,7 +32,7 @@
         </div>
       </div>
     </div>
-    <section class="site-section" id="how-to-design">
+    <section class="site-section" id="how-to-design" data-aos="fade">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-8 text-center">
@@ -69,7 +69,7 @@
       </div>
     </section>
 
-    <section class="site-section bg-light" id="faq">
+    <section class="site-section bg-light" id="faq" data-aos="fade">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-8 text-center">
@@ -81,30 +81,30 @@
       <div class="container" id="accordionExample">
         <div class="card rounded-0 border-left-0 border-right-0 border-top-0 border-bottom">
           <div class="card-header border-0 bg-white" id="headingOne" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <h5 class="mb-0 text-primary">What are the editing options provided for my template?</h5>
+              <h6 class="mb-0 font-weight-bold text-primary">What are the editing options provided for my template?</h6>
           </div>
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
-            <div class="card-body">
+            <div class="card-body py-2">
               Once you have chosen your template, you can edit the font and color of your text upto a maximum of 1000 characters for text.
             </div>
           </div>
         </div>
         <div class="card rounded-0 border-left-0 border-right-0 border-top-0 border-bottom">
           <div class="card-header border-0 bg-white" id="headingTwo" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-              <h5 class="mb-0 text-primary">How can I navigate back to a different template while editing my template?</h5>
+              <h6 class="mb-0 font-weight-bold text-primary">How can I navigate back to a different template while editing my template?</h6>
           </div>
           <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-            <div class="card-body">
+            <div class="card-body py-2">
               You can click on "Select a Design" located on top right corner of the page if you change your mind to use a different template.
             </div>
           </div>
         </div>
         <div class="card rounded-0 border-left-0 border-right-0 border-top-0 border-bottom">
           <div class="card-header border-0 bg-white" id="headingThree" style="cursor:pointer;" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" >
-              <h5 class="mb-0 text-primary">How can I have more customizations and changes in my template?</h5>
+              <h6 class="mb-0 font-weight-bold text-primary">How can I have more customizations and changes in my template?</h6>
           </div>
           <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-            <div class="card-body">
+            <div class="card-body py-2">
               You can always reach out to us at any point of time. To do so, click on "Contact Us" and feel free to share your thoughts.
             </div>
           </div>
@@ -112,7 +112,7 @@
       </div>
     </section>
 
-    <section class="site-section" id="about">
+    <section class="site-section" id="about" data-aos="fade">
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-12 text-center">
@@ -120,11 +120,11 @@
           </div>
         </div>
         <div class="row mb-5">
-          <div class="col-md-5 ml-auto mb-5 order-md-2 aos-init" data-aos="fade">
+          <div class="col-md-5 ml-auto mb-5 order-md-2 aos-init">
             <img src="assets/images/about_1.jpg" alt="Image"
               class="img-fluid rounded">
           </div>
-          <div class="col-md-6 order-md-1 aos-init" data-aos="fade">
+          <div class="col-md-6 order-md-1 aos-init">
             <div class="row">
               <div class="col-12">
               </div>
@@ -140,7 +140,7 @@
     </section>
 
 
-    <section class="site-section bg-light" id="contact">
+    <section class="site-section bg-light" id="contact" data-aos="fade">
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
