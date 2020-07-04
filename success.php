@@ -25,7 +25,7 @@
                 Our top minds are busy at work generating your place cards.<br>
                 <strong>Keep an eye on your SPAM folder too. Just in case.</strong>
             </p>
-            <a type="button" class="btn btn-success btn-md" href="templates.php">Continue</a>
+            <a class="btn btn-success btn-md" href="templates.php">Continue</a>
         </div>
         <?php include "shared/footer.php" ?>
         <?php include "shared/minimal-js.php" ?>
