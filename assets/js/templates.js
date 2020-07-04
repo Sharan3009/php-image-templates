@@ -299,6 +299,7 @@ function onDownloadClickHandler(){
         let arrOfNames = [];
         if(text){
             if(text.trim()){
+                text = text.replace(/[^a-zA-Z\d\.\n ]/g, ""); //regex to keep only alphabets, digits, space, ., \n in text
                 arrOfNames = text.split("\n");
                 if(arrOfNames.length<=configMaxPdfPages){
                     arrOfNames.some((name)=>{
