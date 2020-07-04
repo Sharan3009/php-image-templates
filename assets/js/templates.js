@@ -300,17 +300,32 @@ function onDownloadClickHandler(){
         let text = $("#templateNames").val();
         let error = null;
         let arrOfNames = [];
-        validateNames(text,configMaxPdfPages,function(arrOfNames,error){
-            arrOfNames = arrOfNames;
-            error = error;
-            if(error){
-                e.stopPropagation();
-                generateError(error);
+        if(text){
+            if(text.trim()){
+                arrOfNames = convertTextToArr(text);
+                if(arrOfNames.length<=namesLength){
+                    arrOfNames.some((name)=>{
+                        if(name && name.trim().length>configMaxLengthPerName){
+                            error = `The name "${name}" has more than ${configMaxLengthPerName} characters. Please make sure they do not exceed the limit.`;
+                            return true; //just to break the 'some' loop
+                        }
+                    });
+                } else {
+                    error = `You cannot generate more than ${configMaxPdfPages} page templates at a time`;
+                }
             } else {
-                $("#namesError").addClass("d-none");
-                pdfFormatJson["names"] = arrOfNames;
+                error = "Make sure the input box has atleast one character to proceed";
             }
-        })
+        } else {
+            error = "Textbox cannot be empty";
+        }
+        if(error){
+            e.stopPropagation();
+            generateError(error);
+        } else {
+            $("#namesError").addClass("d-none");
+            pdfFormatJson["names"] = arrOfNames;
+        }
     })
 }
 
@@ -415,44 +430,26 @@ function onModalCloseHandler(){
 function onTemplateNamesTextHandler(){
     $("#templateNames").on("keyup",debounce(function(){
         let text = $(this).val();
-        // sending 1 as param, because we dont want to watch the name if second name is entered, because only 1st name is going to be updated on typing
-        validateNames(text,1,function(arrOfNames,error){
-            if(arrOfNames && arrOfNames[0] && arrOfNames[0].trim() && arrOfNames[0].trim().length){
-                if(!error){
-                    let name = arrOfNames[0].trim();
-                    $("#placecardPreviewText").text(name);
-                }
-            } else {
-                $("#placecardPreviewText").text(configPlaceCardPreviewPlaceholder);
+        let arrOfNames = convertTextToArr(text);
+        let eleId = "#placecardPreviewText";
+        if(arrOfNames && arrOfNames[0] && arrOfNames[0].trim()){
+            let name = arrOfNames[0].trim();
+            if(name.length<=configMaxLengthPerName){
+                $(eleId).text(name);
             }
-        })
+        } else {
+            $(eleId).text(configPlaceCardPreviewPlaceholder);
+        }
     },200))
 }
 
-function validateNames(text,namesLength,cb=()=>{}){
+function convertTextToArr(text){
     let arrOfNames = [];
-    let error = null;
-    if(text){
-        if(text.trim()){
-            text = text.replace(/[^a-zA-Z\d\.\n ]/g, ""); //regex to keep only alphabets, digits, space, ., \n in text
-            arrOfNames = text.split("\n");
-            if(arrOfNames.length<=namesLength){
-                arrOfNames.some((name)=>{
-                    if(name && name.trim().length>configMaxLengthPerName){
-                        error = `The name "${name}" has more than ${configMaxLengthPerName} characters. Please make sure they do not exceed the limit.`;
-                        return true; //just to break the 'some' loop
-                    }
-                });
-            } else {
-                error = `You cannot generate more than ${configMaxPdfPages} page templates at a time`;
-            }
-        } else {
-            error = "Make sure the input box has atleast one character to proceed";
-        }
-    } else {
-        error = "Textbox cannot be empty";
+    if(text && text.trim()){
+        text = text.replace(/[^a-zA-Z\d\.\n ]/g, ""); //regex to keep only alphabets, digits, space, ., \n in text
+        arrOfNames = text.split("\n");
     }
-    cb(arrOfNames,error);
+    return arrOfNames;
 }
 
 //http://davidwalsh.name/javascript-debounce-function
