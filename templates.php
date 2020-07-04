@@ -4,7 +4,7 @@
     <?php $title="Templates" ?>
     <?php include "shared/head-meta.php" ?>
     <?php include "shared/minimal-css.php" ?>
-    <link href="assets/css/home.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="assets/css/templates.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- this apply-font element will stay everytime in order to preload the selected font -->
