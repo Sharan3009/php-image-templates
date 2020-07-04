@@ -6,7 +6,7 @@
     <?php include "shared/minimal-css.php" ?>
     <link href="assets/css/templates.css" rel="stylesheet" type="text/css" media="all" />
 </head>
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body>
     <!-- this apply-font element will stay everytime in order to preload the selected font -->
     <div class="position-fixed apply-font" style="top:-1000px">preload font</div>
     <?php include "config/constants-config.php" ?>
