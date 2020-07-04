@@ -19,6 +19,7 @@ $(document).ready(function(){
     onGenerateTempatesHandler();
     onEmailInputHandler();
     onModalCloseHandler();
+    onTemplateNamesTextHandler();
 });
 
 function getTagsApi(){
@@ -213,6 +214,8 @@ function onLoadMoreHandler(){
 
 function onTemplateSelect(){
     $("#templatesList").on("click",'[name="tagTemplates"]',function(){
+        $("#templateNames").val("");
+        $("#placecardPreviewText").text(configPlaceCardPreviewPlaceholder);
         // adding setTimeout so that font's preapply before the text renders and stops abrupt font toggle in text
         setTimeout(()=>{
             $("#generatePdf .flex-grow-overflow").scrollTop(0);
@@ -297,33 +300,17 @@ function onDownloadClickHandler(){
         let text = $("#templateNames").val();
         let error = null;
         let arrOfNames = [];
-        if(text){
-            if(text.trim()){
-                text = text.replace(/[^a-zA-Z\d\.\n ]/g, ""); //regex to keep only alphabets, digits, space, ., \n in text
-                arrOfNames = text.split("\n");
-                if(arrOfNames.length<=configMaxPdfPages){
-                    arrOfNames.some((name)=>{
-                        if(name && name.trim().length>configMaxLengthPerName){
-                            error = `The name "${name}" has more than ${configMaxLengthPerName} characters. Please make sure they do not exceed the limit.`;
-                            return error;
-                        }
-                    });
-                } else {
-                    error = `You cannot generate more than ${configMaxPdfPages} page templates at a time`;
-                }
+        validateNames(text,configMaxPdfPages,function(arrOfNames,error){
+            arrOfNames = arrOfNames;
+            error = error;
+            if(error){
+                e.stopPropagation();
+                generateError(error);
             } else {
-                error = "Make sure the input box has atleast one character to proceed";
+                $("#namesError").addClass("d-none");
+                pdfFormatJson["names"] = arrOfNames;
             }
-        } else {
-            error = "Textbox cannot be empty";
-        }
-        if(error){
-            e.stopPropagation();
-            generateError(error);
-        } else {
-            $("#namesError").addClass("d-none");
-            pdfFormatJson["names"] = arrOfNames;
-        }
+        })
     })
 }
 
@@ -423,4 +410,47 @@ function onModalCloseHandler(){
         emailTextInput.val("");
         emailError.addClass("d-none");
     })
+}
+
+function onTemplateNamesTextHandler(){
+    $("#templateNames").on("keyup",function(){
+        let text = $(this).val();
+        // sending 1 as param, because we dont want to watch the name if second name is entered, because only 1st name is going to be updated on typing
+        validateNames(text,1,function(arrOfNames,error){
+            if(arrOfNames && arrOfNames[0] && arrOfNames[0].trim() && arrOfNames[0].trim().length){
+                if(!error){
+                    let name = arrOfNames[0].trim();
+                    $("#placecardPreviewText").text(name);
+                }
+            } else {
+                $("#placecardPreviewText").text(configPlaceCardPreviewPlaceholder);
+            }
+        })
+    })
+}
+
+function validateNames(text,namesLength,cb=()=>{}){
+    let arrOfNames = [];
+    let error = null;
+    if(text){
+        if(text.trim()){
+            text = text.replace(/[^a-zA-Z\d\.\n ]/g, ""); //regex to keep only alphabets, digits, space, ., \n in text
+            arrOfNames = text.split("\n");
+            if(arrOfNames.length<=namesLength){
+                arrOfNames.some((name)=>{
+                    if(name && name.trim().length>configMaxLengthPerName){
+                        error = `The name "${name}" has more than ${configMaxLengthPerName} characters. Please make sure they do not exceed the limit.`;
+                        return true; //just to break the 'some' loop
+                    }
+                });
+            } else {
+                error = `You cannot generate more than ${configMaxPdfPages} page templates at a time`;
+            }
+        } else {
+            error = "Make sure the input box has atleast one character to proceed";
+        }
+    } else {
+        error = "Textbox cannot be empty";
+    }
+    cb(arrOfNames,error);
 }
