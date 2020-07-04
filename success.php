@@ -9,7 +9,7 @@
     <body>
         <?php include "config/constants-config.php" ?>
         <?php include "shared/header.php" ?>
-        <div class="parent-container py-5 text-center">
+        <div class="parent-container py-5 text-center container-fluid">
             <h1 class="mb-3">Congratulations! 🎉</h1>
             <h4 class="mb-5">Expect an email in 10-12 minutes.</h4>
             <div class="loader">
