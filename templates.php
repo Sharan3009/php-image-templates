@@ -10,7 +10,7 @@
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
     <!-- this apply-font element will stay everytime in order to preload the selected font -->
     <div class="position-fixed apply-font" style="top:-1000px">preload font</div>
-    <?php include "config/config.php" ?>
+    <?php include "config/constants-config.php" ?>
     <?php include "shared/header.php" ?>
 
     <div class="container-fluid parent-flex" id="select-templates">

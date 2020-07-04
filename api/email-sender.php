@@ -16,9 +16,9 @@
     };
 
     function sendEmail($obj) {
-        $email = $obj['email'];
+        require_once '../config/email-config.php';
+        $senderEmail = $obj['email'];
         $fileUrl = $obj['fileUrl'];
-        $emailSubject = "Templates";
         $emailBody = "<!DOCTYPE html>
                         <html>
                             <head>
@@ -31,25 +31,25 @@
 
         $mail = new PHPMailer();
         $mail->IsSMTP();
-        $mail->SMTPDebug = 0;
-        $mail->SMTPAuth = TRUE;
-        $mail->SMTPSecure = "tls";
-        $mail->Port     = 587;  
-        $mail->Username = "gochat30091994@gmail.com";
-        $mail->Password = "Password@94";
-        $mail->Host     = "smtp.gmail.com";
-        $mail->Mailer   = "smtp";
-        $mail->SetFrom("test@testdomain.com", "Template Generator");
-        $mail->AddAddress($email);
-        $mail->Subject = $emailSubject;
-        $mail->WordWrap   = 80;
+        $mail->SMTPDebug = $config_debug;
+        $mail->SMTPAuth = $config_smtp_auth;
+        $mail->SMTPSecure = $config_smtp_secure;
+        $mail->Port     = $config_port;  
+        $mail->Username = $config_username;
+        $mail->Password = $config_password;
+        $mail->Host     = $config_host;
+        $mail->Mailer   = $config_mailer;
+        $mail->SetFrom($config_username, $config_email_name);
+        $mail->AddAddress($senderEmail);
+        $mail->Subject = $config_email_subject;
+        $mail->WordWrap   = $config_word_wrap;
         $content = $emailBody;
         $mail->MsgHTML($content);
         $mail->IsHTML(true);
-        if(!$mail->Send()) 
-        echo json_encode(false);
-        else 
-        echo json_encode(true);
+        if(!$mail->Send())
+            echo json_encode(false);
+        else
+            echo json_encode(true);
     };
 
 ?>

@@ -17,7 +17,7 @@
     };
 
     function generatePdf($obj) {
-        include "../config/config.php";
+        include "../config/constants-config.php";
         $pdfFormatJson = $obj["pdfFormatJson"] ?? array();
         $font = $pdfFormatJson["font"];
         $templateUrl = $pdfFormatJson["imgBigResolution"];

@@ -13,7 +13,7 @@
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" data-aos-easing="slide"
   data-aos-duration="800" data-aos-delay="0">
   <div class="site-wrap">
-    <?php include "config/config.php" ?>
+    <?php include "config/constants-config.php" ?>
     <?php include "shared/header.php" ?>
     <div id="get-started" class="site-blocks-cover overlay aos-init aos-animate"
       style="background-image: url(&quot;assets/images/get_started_bg.jpg&quot;);background-position: 50% -94.9333px;" data-aos="fade"
