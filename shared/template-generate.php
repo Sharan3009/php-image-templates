@@ -58,9 +58,6 @@
                                             <div class="form-group row">
                                                 <div class="col-sm-2"></div>
                                                 <div class="col-sm-10">
-                                                    <div class="alert alert-success d-none" role="alert" id="emailSuccess">
-                                                        Email sent successfully
-                                                    </div>
                                                     <div class="alert alert-warning d-none" role="alert" id="emailError">
                                                         Error occured while sending the email. Please check the email or try again later.
                                                     </div>
