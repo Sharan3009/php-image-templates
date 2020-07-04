@@ -22,7 +22,7 @@
                 </svg>
             </div>
             <p class="my-5">
-                Our top minds are busy at work transcribing your podcast.<br>
+                Our top minds are busy at work generating your place cards.<br>
                 <strong>Keep an eye on your SPAM folder too. Just in case.</strong>
             </p>
             <button type="button" class="btn btn-success"><a href="templates.php" class="h5 p-3">Continue</a></button>
