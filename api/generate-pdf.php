@@ -10,11 +10,30 @@
         if(isset($_POST['action'])){
             switch($_POST['action']){
                 case "generate-pdf":
-                    generatePdf($_POST);
+                /* sending back the response as soon as pdf generation api hit is recieved
+                    which will redirect the user to a success page and later on all the further function calls
+                    and logics will be executed to generate pdf's and send an email after that.
+                */
+                sendAndCloseConnection();
+                generatePdf($_POST);
                 break;
             }
         }
     };
+
+    function sendAndCloseConnection(){
+        ignore_user_abort(true);
+        set_time_limit(0);
+
+        ob_start();
+        // do initial processing here
+        echo json_encode(true); // send the response
+        header('Connection: close');
+        header('Content-Length: '.ob_get_length());
+        ob_end_flush();
+        ob_flush();
+        flush();
+    }
 
     function generatePdf($obj) {
         include "../config/constants-config.php";
