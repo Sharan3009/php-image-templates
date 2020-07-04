@@ -26,6 +26,18 @@ function contactUsFormHandler(){
         $inputs.each(function() {
             values[this.id] = $(this).val();
         });
-        console.log(values)
+        
+        ajax
+        .post("api/contact-us.php",{
+            action:"contact-us-submit",
+            form:values
+        }).then((response)=>{
+            $inputs.each(function(){
+                $(this).val("");
+            })
+        }).catch((error)=>{
+            alert("Error occured while sending the query. Please try again!");
+            console.error(error);
+        })
     })
 }
