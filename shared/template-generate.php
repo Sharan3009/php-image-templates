@@ -35,7 +35,7 @@
                             </div>
                         </div>
                         <div class="my-2">
-                            <button type="button" class="btn btn-success download-template" data-toggle="modal" data-target="#pdfGenerateModal">
+                            <button type="button" class="btn btn-success download-template btn-md" data-toggle="modal" data-target="#pdfGenerateModal">
                                 Download PDF
                             </button>
                             <div class="modal fade" id="pdfGenerateModal" tabindex="-1" role="dialog" aria-labelledby="pdfGenerateModalLabel" aria-hidden="true">
@@ -65,8 +65,8 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-success generate-templates" disabled>Get my cards!</button>
-                                            <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-success generate-templates btn-md" disabled>Get my cards!</button>
+                                            <button type="button" class="btn btn-light btn-md" data-dismiss="modal">Close</button>
                                         </div>
                                     </div>
                                 </div>
