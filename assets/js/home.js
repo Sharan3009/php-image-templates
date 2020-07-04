@@ -13,3 +13,19 @@ new Typed('.typed-words', {
     loop: true,
     showCursor: true
   });
+
+$(document).ready(function(){
+    contactUsFormHandler();
+})
+
+function contactUsFormHandler(){
+    $("#contactUsForm").submit(function(event){
+        event.preventDefault();
+        var $inputs = $(`#${this.id} :input:not([type="submit"])`);
+        var values = {};
+        $inputs.each(function() {
+            values[this.id] = $(this).val();
+        });
+        console.log(values)
+    })
+}
