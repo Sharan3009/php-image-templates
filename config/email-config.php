@@ -5,8 +5,8 @@
     $config_port = 587;
     $config_email_subject = "Templates";
     $config_email_name = "Templates Generator";
-    $config_username = "gochat30091994@gmail.com";
-    $config_password = "Password@94";
+    $config_username = ""; // add sender's email address
+    $config_password = ""; // add sender's email address' password
     $config_host = "smtp.gmail.com";
     $config_mailer = "smtp";
     $config_word_wrap = 80;

@@ -6,7 +6,7 @@
     function getTemplates($obj) {
         $page = $obj['page'] ?? 1;
         $count = $obj['count'] ?? 10;
-        $filePath = __DIR__ . "/../assets/json/templates.json";;
+        $filePath = __DIR__ . "/../assets/json/templates.json";
         if(file_exists($filePath)){
             $file = file_get_contents($filePath);
             $json = new StdClass;

@@ -17,8 +17,12 @@
 
     function sendEmail($obj) {
         require_once '../config/email-config.php';
+        global $contents;
+        $contents = getStatusFromFile();
+        $id = uniqid();
         $senderEmail = $obj['email'];
         $fileUrl = $obj['fileUrl'];
+        insertPdfStatus($id,$senderEmail,$fileUrl,$contents);
         $emailBody = "<!DOCTYPE html>
                         <html>
                             <head>
@@ -49,7 +53,33 @@
         if(!$mail->Send())
             echo json_encode(false);
         else
-            echo json_encode(true);
+            updatePdfStatus($id,$contents);
+        
+        setStatusInFile($contents);
     };
+
+    function getStatusFromFile(){
+        $filePath = __DIR__ . "/../assets/json/pdf-status.json";
+        $contents = file_get_contents($filePath);
+        $contentsDecoded = json_decode($contents);
+        return $contentsDecoded;
+    }
+
+    function setStatusInFile($contentsDecoded){
+        //Encode the array back into a JSON string.
+        $json = json_encode($contentsDecoded,JSON_PRETTY_PRINT);
+        $filePath = __DIR__ . "/../assets/json/pdf-status.json";
+        //Save the file.
+        file_put_contents($filePath, $json);
+    }
+
+    function insertPdfStatus($id,$email,$fileUrl,$contents){
+        $value = array("email"=>$email,"fileUrl"=>$fileUrl,"emailSent"=>FALSE);
+        $contents->$id = $value;
+    }
+
+    function updatePdfStatus($id,$contents){
+        $contents->$id['emailSent'] = TRUE;
+    }
 
 ?>
