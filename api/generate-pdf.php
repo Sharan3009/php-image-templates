@@ -75,7 +75,7 @@
                         top:50%;
                         transform:translateY(-50%);
                     }
-                    .template-text{
+                    .template-name-text{
                         line-height:0.7;
                         padding:0px 8px;
                         font-family:{$font};
@@ -114,7 +114,7 @@
                         <div class='img-container'>
                             <img style='width:100%;' src='$templateUrl'/>
                         </div>
-                        <div class='template-text'>{$value}</div>
+                        <div class='template-name-text'>{$value}</div>
                     </div>
                 </div>
             ";

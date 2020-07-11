@@ -1,8 +1,9 @@
 <?php
 $config_max_length_per_name = 100;
+$config_max_length_per_table = 20;
 $config_max_pdf_pages = 30;
 $config_initial_page_number = 1;
 $config_count_per_page = 12;
 $config_toggle_to_design_btn_text = "Get Started";
-$config_place_card_preview_placeholder = "Place Card";
+$config_place_card_name_placeholder = "Mr. Pearson";
 ?>

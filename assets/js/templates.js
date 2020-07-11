@@ -215,7 +215,7 @@ function onLoadMoreHandler(){
 function onTemplateSelect(){
     $("#templatesList").on("click",'[name="tagTemplates"]',function(){
         $("#templateNames").val("");
-        $("#placecardPreviewText").text(configPlaceCardPreviewPlaceholder);
+        $("#placecardNameText").text(configPlaceCardPreviewPlaceholder);
         // adding setTimeout so that font's preapply before the text renders and stops abrupt font toggle in text
         setTimeout(()=>{
             $("#generatePdf .flex-grow-overflow").scrollTop(0);
@@ -299,12 +299,12 @@ function onDownloadClickHandler(){
     $(".download-template").on("click",function(e){
         let text = $("#templateNames").val();
         let error = null;
-        let arrOfNames = [];
+        let arrOfPlaceCardData = [];
         if(text){
             if(text.trim()){
-                arrOfNames = convertTextToArr(text);
-                if(arrOfNames.length<=namesLength){
-                    arrOfNames.some((name)=>{
+                arrOfPlaceCardData = convertTextToArr(text);
+                if(arrOfPlaceCardData.length<=configMaxPdfPages){
+                    arrOfPlaceCardData.some((name)=>{
                         if(name && name.trim().length>configMaxLengthPerName){
                             error = `The name "${name}" has more than ${configMaxLengthPerName} characters. Please make sure they do not exceed the limit.`;
                             return true; //just to break the 'some' loop
@@ -324,7 +324,7 @@ function onDownloadClickHandler(){
             generateError(error);
         } else {
             $("#namesError").addClass("d-none");
-            pdfFormatJson["names"] = arrOfNames;
+            pdfFormatJson["names"] = arrOfPlaceCardData;
         }
     })
 }
@@ -430,26 +430,49 @@ function onModalCloseHandler(){
 function onTemplateNamesTextHandler(){
     $("#templateNames").on("keyup",debounce(function(){
         let text = $(this).val();
-        let arrOfNames = convertTextToArr(text);
-        let eleId = "#placecardPreviewText";
-        if(arrOfNames && arrOfNames[0] && arrOfNames[0].trim()){
-            let name = arrOfNames[0].trim();
-            if(name.length<=configMaxLengthPerName){
-                $(eleId).text(name);
+        let arrOfPlaceCardData = convertTextToArr(text);
+        let nameEleId = "#placecardNameText";
+        let tableEleId = "#placecardTableText";
+        if(arrOfPlaceCardData && arrOfPlaceCardData[0]){
+            if(arrOfPlaceCardData[0].name && arrOfPlaceCardData[0].name.trim()){
+                let name = arrOfPlaceCardData[0].name.trim();
+                if(name.length<=configMaxLengthPerName){
+                    $(nameEleId).text(name);
+                }
+            } else {
+                $(nameEleId).text(configPlaceCardPreviewPlaceholder);
+            }
+
+            if(arrOfPlaceCardData[0].table){
+                let table = arrOfPlaceCardData[0].table.trim();
+                if(table.length<configMaxLengthPerTable){
+                    $(tableEleId).text(table);
+                }
+            } else {
+                $(tableEleId).text(null);
             }
         } else {
-            $(eleId).text(configPlaceCardPreviewPlaceholder);
+            $(nameEleId).text(configPlaceCardPreviewPlaceholder);
+            $(tableEleId).text(null);
         }
     },200))
 }
 
 function convertTextToArr(text){
-    let arrOfNames = [];
+    let arrNewLineSplit = [];
+    let arrOfPlaceCardData = [];
     if(text && text.trim()){
-        text = text.replace(/[^a-zA-Z\d\.\n ]/g, ""); //regex to keep only alphabets, digits, space, ., \n in text
-        arrOfNames = text.split("\n");
+        arrNewLineSplit = text.split("\n");
+        arrOfPlaceCardData = arrNewLineSplit.map(function(s){
+            let arr = s.split(",");
+            let obj = {
+                table: (arr.length>=2)?arr.pop():null,
+                name : arr.join(",").replace(/[^a-zA-Z\d\.\n ]/g, "")
+            }
+            return obj;
+        })
     }
-    return arrOfNames;
+    return arrOfPlaceCardData;
 }
 
 //http://davidwalsh.name/javascript-debounce-function

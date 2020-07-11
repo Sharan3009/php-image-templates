@@ -21,10 +21,18 @@ body {
     padding-bottom: 54.25%;
 }
 
-.template-text{
+.template-name-text{
     position: absolute;
     left:0px;
     top:50%;
+    line-height: 1;
+    transform: translateY(-50%);
+}
+
+.template-table-text{
+    position: absolute;
+    left:0px;
+    top:75%;
     line-height: 1;
     transform: translateY(-50%);
 }

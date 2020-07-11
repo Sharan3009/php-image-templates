@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 col-md-6 col-12">
-                        <textarea name="names" id="templateNames" class="form-control" rows="10" placeholder="Enter the names separated by different lines"></textarea>
+                        <textarea name="names" id="templateNames" class="form-control" rows="10" placeholder="Separate names and tables with commas, or just paste names if you don't have tables."></textarea>
                     </div>
                     <div class="col-lg-7 col-md-6 col-12 py-2">
                         <h5>Choose the font and color of the text that you need to use in your templates</h5>

@@ -32,11 +32,12 @@
     <script src="assets/js/fontpicker.js" type="text/javascript"></script>
     <script>
         configMaxLengthPerName = <?php echo $config_max_length_per_name ?>;
+        configMaxLengthPerTable = <?php echo $config_max_length_per_table ?>;
         configMaxPdfPages = <?php echo $config_max_pdf_pages ?>;
         configInitialPageNumber = <?php echo $config_initial_page_number ?>;
         configCountPerPage = <?php echo $config_count_per_page ?>;
         configToggleToDesignBtnText = "<?php echo $config_toggle_to_design_btn_text ?>";
-        configPlaceCardPreviewPlaceholder = "<?php echo $config_place_card_preview_placeholder ?>";
+        configPlaceCardPreviewPlaceholder = "<?php echo $config_place_card_name_placeholder ?>";
     </script>
     <script src="assets/js/templates.js" type="text/javascript"></script>
 </body>
