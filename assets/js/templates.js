@@ -459,7 +459,7 @@ function onTemplateNamesTextHandler(){
             $(nameEleId).text(configPlaceCardPreviewPlaceholder);
             $(tableEleId).text(null);
         }
-    },200))
+    },100))
 }
 
 function convertTextToArr(text){
