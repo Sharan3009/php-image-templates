@@ -1,5 +1,5 @@
 <?php
-$config_max_length_per_name = 100;
+$config_max_length_per_name = 50;
 $config_max_length_per_table = 20;
 $config_max_pdf_pages = 30;
 $config_initial_page_number = 1;
