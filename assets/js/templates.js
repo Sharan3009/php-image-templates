@@ -4,7 +4,7 @@ let themeType;
 let pdfFormatJson = {
     color: "",
     font: "",
-    names: [],
+    placeCardData: [],
     email:$("#staticEmail").val()
 };
 
@@ -304,9 +304,13 @@ function onDownloadClickHandler(){
             if(text.trim()){
                 arrOfPlaceCardData = convertTextToArr(text);
                 if(arrOfPlaceCardData.length<=configMaxPdfPages){
-                    arrOfPlaceCardData.some((name)=>{
-                        if(name && name.trim().length>configMaxLengthPerName){
-                            error = `The name "${name}" has more than ${configMaxLengthPerName} characters. Please make sure they do not exceed the limit.`;
+                    arrOfPlaceCardData.some((obj)=>{
+                        if(obj.name && obj.name.trim().length>configMaxLengthPerName){
+                            error = `The name "${obj.name}" has more than ${configMaxLengthPerName} characters. Please make sure they do not exceed the limit.`;
+                            return true; //just to break the 'some' loop
+                        }
+                        if(obj.table && obj.table.trim().length>configMaxLengthPerTable){
+                            error = `The table "${obj.table}" has more than ${configMaxLengthPerTable} characters. Please make sure they do not exceed the limit.`;
                             return true; //just to break the 'some' loop
                         }
                     });
@@ -324,7 +328,7 @@ function onDownloadClickHandler(){
             generateError(error);
         } else {
             $("#namesError").addClass("d-none");
-            pdfFormatJson["names"] = arrOfPlaceCardData;
+            pdfFormatJson.placeCardData = arrOfPlaceCardData;
         }
     })
 }

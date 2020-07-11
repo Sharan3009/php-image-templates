@@ -13,7 +13,7 @@
                     which will redirect the user to a success page and later on all the further function calls
                     and logics will be executed to generate pdf's and send an email after that.
                 */
-                sendAndCloseConnection();
+                // sendAndCloseConnection();
                 generatePdf($_POST);
                 break;
             }
@@ -40,15 +40,19 @@
         $font = $pdfFormatJson["font"];
         $templateUrl = $pdfFormatJson["imgBigResolution"];
         $color = $pdfFormatJson["color"];
-        $names = $pdfFormatJson["names"];
+        $placeCardData = $pdfFormatJson["placeCardData"];
         $email = $pdfFormatJson["email"];
-        $namesLength = count($names);
-        if(count($names)>$config_max_pdf_pages){
+        $placeCardDataLength = count($placeCardData);
+        if(count($placeCardData)>$config_max_pdf_pages){
             echo json_encode(false);
             return;
         } else {
-            foreach($names as $name){
-                if(strlen(trim($name))>$config_max_length_per_name){
+            foreach($placeCardData as $obj){
+                if(strlen(trim($obj['name']))>$config_max_length_per_name){
+                    echo json_encode(false);
+                    return;
+                }
+                if(strlen(trim($obj['table']))>$config_max_length_per_table){
                     echo json_encode(false);
                     return;
                 }
@@ -88,6 +92,19 @@
                         transform:translateY(-50%);
                         color:{$color};
                     }
+                    .template-table-text{
+                        line-height:0.7;
+                        padding:0px 8px;
+                        font-family:{$font};
+                        font-size:55px;
+                        position:absolute;
+                        left:0px;
+                        right:0px;
+                        text-align:center;
+                        top:70%;
+                        transform:translateY(-50%);
+                        color:{$color};
+                    }
                 </style>
                 <link href='https://fonts.googleapis.com/css?family={$font}%3Aregular&subset=latin&font-display=swap' rel='stylesheet' type='text/css' media='all' />            </head>
             <body>
@@ -104,17 +121,20 @@
 
         $pageBreakCss = "page-break-after:always;";
 
-        foreach($names as $key=>$value) {
-            if(++$i === $namesLength) {
+        foreach($placeCardData as $key=>$obj) {
+            if(++$i === $placeCardDataLength) {
                 $pageBreakCss="";
             }
+            $name = $obj["name"];
+            $table = $obj["table"];
             $html_content .= "
                 <div class='parent-div' style='$pageBreakCss'>
                     <div class='template-container'>
                         <div class='img-container'>
                             <img style='width:100%;' src='$templateUrl'/>
                         </div>
-                        <div class='template-name-text'>{$value}</div>
+                        <div class='template-name-text'>{$name}</div>
+                        <div class='template-table-text'>{$table}</div>
                     </div>
                 </div>
             ";
