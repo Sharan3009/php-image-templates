@@ -13,7 +13,7 @@
                     which will redirect the user to a success page and later on all the further function calls
                     and logics will be executed to generate pdf's and send an email after that.
                 */
-                // sendAndCloseConnection();
+                sendAndCloseConnection();
                 generatePdf($_POST);
                 break;
             }
